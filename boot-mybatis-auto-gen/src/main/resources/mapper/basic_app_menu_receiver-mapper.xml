@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.BasicAppMenuReceiverDAO">
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="menu_id" property="menuId" jdbcType="INTEGER"/>
+        <result column="tag_type" property="tagType" jdbcType="VARCHAR"/>
+        <result column="tag_value" property="tagValue" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="SELECT_All_Column">
+        SELECT id, menu_id, tag_type, tag_value
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        SELECT *
+        FROM basic_app_menu_receiver
+        WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        DELETE FROM basic_app_menu_receiver
+        WHERE id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        INSERT INTO basic_app_menu_receiver ( menu_id, 
+          tag_type, tag_value )
+        VALUES ( #{menuId,jdbcType=INTEGER}, 
+          #{tagType,jdbcType=VARCHAR}, #{tagValue,jdbcType=VARCHAR} )
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        INSERT INTO basic_app_menu_receiver
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="menuId != null">
+                menu_id,
+            </if>
+            <if test="tagType != null">
+                tag_type,
+            </if>
+            <if test="tagValue != null">
+                tag_value,
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="menuId != null">
+                #{menuId,jdbcType=INTEGER},
+            </if>
+            <if test="tagType != null">
+                #{tagType,jdbcType=VARCHAR},
+            </if>
+            <if test="tagValue != null">
+                #{tagValue,jdbcType=VARCHAR},
+            </if>
+        </trim>
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO basic_app_menu_receiver ( menu_id, 
+          tag_type, tag_value )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            (
+            #{item.menuId,jdbcType=INTEGER}, 
+            #{item.tagType,jdbcType=VARCHAR}, #{item.tagValue,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        UPDATE basic_app_menu_receiver
+        <set>
+            <if test="menuId != null">
+                menu_id = #{menuId,jdbcType=INTEGER},
+            </if>
+            <if test="tagType != null">
+                tag_type = #{tagType,jdbcType=VARCHAR},
+            </if>
+            <if test="tagValue != null">
+                tag_value = #{tagValue,jdbcType=VARCHAR},
+            </if>
+        </set>
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.entity.BasicAppMenuReceiver">
+        UPDATE basic_app_menu_receiver
+        SET menu_id = #{menuId,jdbcType=INTEGER},
+            tag_type = #{tagType,jdbcType=VARCHAR},
+            tag_value = #{tagValue,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

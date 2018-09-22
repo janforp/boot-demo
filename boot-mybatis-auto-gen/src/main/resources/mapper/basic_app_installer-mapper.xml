@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.BasicAppInstallerDAO">
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.entity.BasicAppInstaller">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="app_id" property="appId" jdbcType="INTEGER"/>
+        <result column="version" property="version" jdbcType="VARCHAR"/>
+        <result column="installer_name" property="installerName" jdbcType="VARCHAR"/>
+        <result column="installer_url" property="installerUrl" jdbcType="VARCHAR"/>
+        <result column="os_version" property="osVersion" jdbcType="VARCHAR"/>
+        <result column="installer_size" property="installerSize" jdbcType="DOUBLE"/>
+        <result column="extension" property="extension" jdbcType="VARCHAR"/>
+        <result column="md5_code" property="md5Code" jdbcType="VARCHAR"/>
+        <result column="download_type_code" property="downloadTypeCode" jdbcType="CHAR"/>
+        <result column="installer_handle" property="installerHandle" jdbcType="CHAR"/>
+        <result column="update_instructions" property="updateInstructions" jdbcType="VARCHAR"/>
+        <result column="creator_id" property="creatorId" jdbcType="VARCHAR"/>
+        <result column="creator_name" property="creatorName" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="DATE"/>
+        <result column="publisher_id" property="publisherId" jdbcType="VARCHAR"/>
+        <result column="publisher_name" property="publisherName" jdbcType="VARCHAR"/>
+        <result column="publish_date" property="publishDate" jdbcType="TIMESTAMP"/>
+        <result column="status" property="status" jdbcType="CHAR"/>
+        <result column="dependent_version" property="dependentVersion" jdbcType="VARCHAR"/>
+        <result column="location_code" property="locationCode" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="SELECT_All_Column">
+        SELECT id, app_id, version, installer_name, installer_url, 
+        os_version, installer_size, extension, md5_code, download_type_code, 
+        installer_handle, update_instructions, creator_id, creator_name, create_date, 
+        publisher_id, publisher_name, publish_date, status, dependent_version, 
+        location_code
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.entity.BasicAppInstaller">
+        SELECT *
+        FROM basic_app_installer
+        WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.entity.BasicAppInstaller">
+        DELETE FROM basic_app_installer
+        WHERE id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.boot.demo.auto.entity.BasicAppInstaller">
+        INSERT INTO basic_app_installer ( app_id, 
+          version, installer_name, installer_url, 
+          os_version, installer_size, extension, 
+          md5_code, download_type_code, installer_handle, 
+          update_instructions, creator_id, creator_name, 
+          create_date, publisher_id, publisher_name, 
+          publish_date, status, dependent_version, 
+          location_code )
+        VALUES ( #{appId,jdbcType=INTEGER}, 
+          #{version,jdbcType=VARCHAR}, #{installerName,jdbcType=VARCHAR}, #{installerUrl,jdbcType=VARCHAR}, 
+          #{osVersion,jdbcType=VARCHAR}, #{installerSize,jdbcType=DOUBLE}, #{extension,jdbcType=VARCHAR}, 
+          #{md5Code,jdbcType=VARCHAR}, #{downloadTypeCode,jdbcType=CHAR}, #{installerHandle,jdbcType=CHAR}, 
+          #{updateInstructions,jdbcType=VARCHAR}, #{creatorId,jdbcType=VARCHAR}, #{creatorName,jdbcType=VARCHAR}, 
+          #{createDate,jdbcType=DATE}, #{publisherId,jdbcType=VARCHAR}, #{publisherName,jdbcType=VARCHAR}, 
+          #{publishDate,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR}, #{dependentVersion,jdbcType=VARCHAR}, 
+          #{locationCode,jdbcType=VARCHAR} )
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.entity.BasicAppInstaller">
+        INSERT INTO basic_app_installer
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="appId != null">
+                app_id,
+            </if>
+            <if test="version != null">
+                version,
+            </if>
+            <if test="installerName != null">
+                installer_name,
+            </if>
+            <if test="installerUrl != null">
+                installer_url,
+            </if>
+            <if test="osVersion != null">
+                os_version,
+            </if>
+            <if test="installerSize != null">
+                installer_size,
+            </if>
+            <if test="extension != null">
+                extension,
+            </if>
+            <if test="md5Code != null">
+                md5_code,
+            </if>
+            <if test="downloadTypeCode != null">
+                download_type_code,
+            </if>
+            <if test="installerHandle != null">
+                installer_handle,
+            </if>
+            <if test="updateInstructions != null">
+                update_instructions,
+            </if>
+            <if test="creatorId != null">
+                creator_id,
+            </if>
+            <if test="creatorName != null">
+                creator_name,
+            </if>
+            <if test="createDate != null">
+                create_date,
+            </if>
+            <if test="publisherId != null">
+                publisher_id,
+            </if>
+            <if test="publisherName != null">
+                publisher_name,
+            </if>
+            <if test="publishDate != null">
+                publish_date,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="dependentVersion != null">
+                dependent_version,
+            </if>
+            <if test="locationCode != null">
+                location_code,
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="appId != null">
+                #{appId,jdbcType=INTEGER},
+            </if>
+            <if test="version != null">
+                #{version,jdbcType=VARCHAR},
+            </if>
+            <if test="installerName != null">
+                #{installerName,jdbcType=VARCHAR},
+            </if>
+            <if test="installerUrl != null">
+                #{installerUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="osVersion != null">
+                #{osVersion,jdbcType=VARCHAR},
+            </if>
+            <if test="installerSize != null">
+                #{installerSize,jdbcType=DOUBLE},
+            </if>
+            <if test="extension != null">
+                #{extension,jdbcType=VARCHAR},
+            </if>
+            <if test="md5Code != null">
+                #{md5Code,jdbcType=VARCHAR},
+            </if>
+            <if test="downloadTypeCode != null">
+                #{downloadTypeCode,jdbcType=CHAR},
+            </if>
+            <if test="installerHandle != null">
+                #{installerHandle,jdbcType=CHAR},
+            </if>
+            <if test="updateInstructions != null">
+                #{updateInstructions,jdbcType=VARCHAR},
+            </if>
+            <if test="creatorId != null">
+                #{creatorId,jdbcType=VARCHAR},
+            </if>
+            <if test="creatorName != null">
+                #{creatorName,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=DATE},
+            </if>
+            <if test="publisherId != null">
+                #{publisherId,jdbcType=VARCHAR},
+            </if>
+            <if test="publisherName != null">
+                #{publisherName,jdbcType=VARCHAR},
+            </if>
+            <if test="publishDate != null">
+                #{publishDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=CHAR},
+            </if>
+            <if test="dependentVersion != null">
+                #{dependentVersion,jdbcType=VARCHAR},
+            </if>
+            <if test="locationCode != null">
+                #{locationCode,jdbcType=VARCHAR},
+            </if>
+        </trim>
+        <selectKey keyProperty="id" resultType="int">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO basic_app_installer ( app_id, 
+          version, installer_name, installer_url, 
+          os_version, installer_size, extension, 
+          md5_code, download_type_code, installer_handle, 
+          update_instructions, creator_id, creator_name, 
+          create_date, publisher_id, publisher_name, 
+          publish_date, status, dependent_version, 
+          location_code )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            (
+            #{item.appId,jdbcType=INTEGER}, 
+            #{item.version,jdbcType=VARCHAR}, #{item.installerName,jdbcType=VARCHAR}, #{item.installerUrl,jdbcType=VARCHAR}, 
+            #{item.osVersion,jdbcType=VARCHAR}, #{item.installerSize,jdbcType=DOUBLE}, #{item.extension,jdbcType=VARCHAR}, 
+            #{item.md5Code,jdbcType=VARCHAR}, #{item.downloadTypeCode,jdbcType=CHAR}, #{item.installerHandle,jdbcType=CHAR}, 
+            #{item.updateInstructions,jdbcType=VARCHAR}, #{item.creatorId,jdbcType=VARCHAR}, #{item.creatorName,jdbcType=VARCHAR}, 
+            #{item.createDate,jdbcType=DATE}, #{item.publisherId,jdbcType=VARCHAR}, #{item.publisherName,jdbcType=VARCHAR}, 
+            #{item.publishDate,jdbcType=TIMESTAMP}, #{item.status,jdbcType=CHAR}, #{item.dependentVersion,jdbcType=VARCHAR}, 
+            #{item.locationCode,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.entity.BasicAppInstaller">
+        UPDATE basic_app_installer
+        <set>
+            <if test="appId != null">
+                app_id = #{appId,jdbcType=INTEGER},
+            </if>
+            <if test="version != null">
+                version = #{version,jdbcType=VARCHAR},
+            </if>
+            <if test="installerName != null">
+                installer_name = #{installerName,jdbcType=VARCHAR},
+            </if>
+            <if test="installerUrl != null">
+                installer_url = #{installerUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="osVersion != null">
+                os_version = #{osVersion,jdbcType=VARCHAR},
+            </if>
+            <if test="installerSize != null">
+                installer_size = #{installerSize,jdbcType=DOUBLE},
+            </if>
+            <if test="extension != null">
+                extension = #{extension,jdbcType=VARCHAR},
+            </if>
+            <if test="md5Code != null">
+                md5_code = #{md5Code,jdbcType=VARCHAR},
+            </if>
+            <if test="downloadTypeCode != null">
+                download_type_code = #{downloadTypeCode,jdbcType=CHAR},
+            </if>
+            <if test="installerHandle != null">
+                installer_handle = #{installerHandle,jdbcType=CHAR},
+            </if>
+            <if test="updateInstructions != null">
+                update_instructions = #{updateInstructions,jdbcType=VARCHAR},
+            </if>
+            <if test="creatorId != null">
+                creator_id = #{creatorId,jdbcType=VARCHAR},
+            </if>
+            <if test="creatorName != null">
+                creator_name = #{creatorName,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                create_date = #{createDate,jdbcType=DATE},
+            </if>
+            <if test="publisherId != null">
+                publisher_id = #{publisherId,jdbcType=VARCHAR},
+            </if>
+            <if test="publisherName != null">
+                publisher_name = #{publisherName,jdbcType=VARCHAR},
+            </if>
+            <if test="publishDate != null">
+                publish_date = #{publishDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=CHAR},
+            </if>
+            <if test="dependentVersion != null">
+                dependent_version = #{dependentVersion,jdbcType=VARCHAR},
+            </if>
+            <if test="locationCode != null">
+                location_code = #{locationCode,jdbcType=VARCHAR},
+            </if>
+        </set>
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.entity.BasicAppInstaller">
+        UPDATE basic_app_installer
+        SET app_id = #{appId,jdbcType=INTEGER},
+            version = #{version,jdbcType=VARCHAR},
+            installer_name = #{installerName,jdbcType=VARCHAR},
+            installer_url = #{installerUrl,jdbcType=VARCHAR},
+            os_version = #{osVersion,jdbcType=VARCHAR},
+            installer_size = #{installerSize,jdbcType=DOUBLE},
+            extension = #{extension,jdbcType=VARCHAR},
+            md5_code = #{md5Code,jdbcType=VARCHAR},
+            download_type_code = #{downloadTypeCode,jdbcType=CHAR},
+            installer_handle = #{installerHandle,jdbcType=CHAR},
+            update_instructions = #{updateInstructions,jdbcType=VARCHAR},
+            creator_id = #{creatorId,jdbcType=VARCHAR},
+            creator_name = #{creatorName,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=DATE},
+            publisher_id = #{publisherId,jdbcType=VARCHAR},
+            publisher_name = #{publisherName,jdbcType=VARCHAR},
+            publish_date = #{publishDate,jdbcType=TIMESTAMP},
+            status = #{status,jdbcType=CHAR},
+            dependent_version = #{dependentVersion,jdbcType=VARCHAR},
+            location_code = #{locationCode,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>
