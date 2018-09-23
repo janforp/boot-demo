@@ -3,6 +3,8 @@ package com.boot.demo.mybatis.controller;
 import com.boot.demo.common.model.User;
 import com.boot.demo.common.result.ResultDTO;
 import com.boot.demo.mybatis.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,12 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/user")
+@Api(description = "dfsdf")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
     @PostMapping
+    @ApiOperation(value = "sdfs")
     public ResultDTO<User> addUser(@RequestBody User user) {
         user = userService.addUser(user);
         return ResultDTO.toSuccess(user);
