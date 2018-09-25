@@ -17,13 +17,7 @@ public class UserService {
     private UserDAO userDAO;
 
     public User findById(String userId) {
-
-        User user = new User();
-        user.setGender(1);
-        user.setRemark("这是一个好人");
-        user.setUserId(userId);
-        user.setUserName("张三");
-        return user;
+        return userDAO.selectByPrimaryKey(userId);
     }
 
     public User addUser(User user) {

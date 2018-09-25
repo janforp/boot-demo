@@ -27,7 +27,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    @ApiOperation(value = "sdfs")
+    @ApiOperation(value = "添加")
     public ResultDTO<User> addUser(@RequestBody User user) {
         user = userService.addUser(user);
         return ResultDTO.toSuccess(user);
