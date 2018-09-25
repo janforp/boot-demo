@@ -29,6 +29,12 @@ public class UserController {
         return ResultDTO.toSuccess(user);
     }
 
+    /**
+     * localhost:9118/user/1
+     *
+     * @param userId
+     * @return
+     */
     @GetMapping("/{userId}")
     public ResultDTO<User> findById(@PathVariable("userId") String userId) {
         User user = userService.findById(userId);

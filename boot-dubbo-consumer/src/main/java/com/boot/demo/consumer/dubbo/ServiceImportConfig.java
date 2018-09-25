@@ -8,13 +8,13 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @since  2017-05-27 09:08
  * @author Janita
- * 该模块的 dubbo 服务提供配置
+ * 该模块的 dubbo 服务引入配置
  */
 @Configuration
 public class ServiceImportConfig extends DubboxBaseConfig {
 
     /**
-     * 引用服務
+     * 引用服務`
      * @return  服务的对象
      */
     @Bean(name="connectWithHisService")

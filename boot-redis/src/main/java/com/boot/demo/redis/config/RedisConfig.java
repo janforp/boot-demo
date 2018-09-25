@@ -12,6 +12,8 @@ import redis.clients.jedis.JedisPoolConfig;
 /**
  * Created by Janita on 2017/3/14 0014.
  * redis配置
+ *
+ * @author Janita
  */
 @Configuration
 @PropertySource("classpath:redis.properties")

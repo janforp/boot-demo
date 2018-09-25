@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * Created by Janita on 2017-05-22 11:51
  * 自定义异常统
  * 一处理
+ *
+ * @author Janita
  */
 @RestControllerAdvice
 public class ExceptionHandle {

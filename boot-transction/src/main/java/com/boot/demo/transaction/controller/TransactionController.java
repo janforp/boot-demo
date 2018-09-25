@@ -39,11 +39,11 @@ public class TransactionController {
     }
 
     @GetMapping("/transaction")
-    @Transactional(rollbackFor = Exception.class)
+//    @Transactional(rollbackFor = Exception.class)
     public ResultDTO<User> transaction() {
         User user = new User();
         user.setUserId(new Random(100).nextInt() + "");
-        user.setUserName("janita");
+        user.setUserName("Janita");
         user.setGender(1);
         user.setRemark("remark");
         userService.insert(user);

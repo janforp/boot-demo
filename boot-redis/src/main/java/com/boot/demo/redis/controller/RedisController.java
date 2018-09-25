@@ -21,12 +21,25 @@ public class RedisController {
     @Autowired
     private RedisUtilsTemplate template;
 
+    /**
+     * http://127.0.0.1:9009/redis/key/value
+     *
+     * @param key
+     * @param value
+     * @return
+     */
     @GetMapping("/{key}/{value}")
     public ResultDTO<String> setToRedis(@PathVariable String key, @PathVariable String value) {
         RedisUtils.setKeyOfString(template, key, value);
         return ResultDTO.toSuccess(null);
     }
 
+    /**
+     * http://127.0.0.1:9009/redis/fetch/key
+     *
+     * @param key
+     * @return
+     */
     @GetMapping("/fetch/{key}")
     public ResultDTO<String> getFromRedis(@PathVariable String key) {
         String value = RedisUtils.getStringOfKey(template, key);

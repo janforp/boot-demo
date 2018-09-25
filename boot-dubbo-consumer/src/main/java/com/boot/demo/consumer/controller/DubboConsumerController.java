@@ -21,6 +21,12 @@ public class DubboConsumerController {
     @Autowired
     private IUserService userService;
 
+    /**
+     * http://127.0.0.1:9011/dubbo/1
+     *
+     * @param userId
+     * @return
+     */
     @GetMapping("/{userId}")
     public ResultDTO<User> getByUserId(@PathVariable String userId) {
         User user = userService.getUserById(userId);
