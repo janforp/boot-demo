@@ -25,25 +25,26 @@ public class CacheConfig {
 
     public enum Caches {
 
+        /*** 查询*/
         getPersonById(20),
+
+        /*** 其他的*/
         getSomething,
-        getOtherThing(300, 1000),
-        ;
 
+        /*** 其他的*/
+        getOtherThing(300, 1000);
         Caches() {}
-
         Caches(int ttl) {
             this.ttl = ttl;
         }
-
         Caches(int ttl, int maxSize) {
             this.ttl = ttl;
             this.maxSize = maxSize;
         }
-
-        private int maxSize = DEFAULT_MAX_SIZE;    //最大數量
-        private int ttl = DEFAULT_TTL;        //过期时间（秒）
-
+        /**最大數量*/
+        private int maxSize = DEFAULT_MAX_SIZE;
+        /**过期时间（秒）*/
+        private int ttl = DEFAULT_TTL;
         public int getMaxSize() {
             return maxSize;
         }
