@@ -3,7 +3,7 @@ package com.boot.demo.auto.entity;
 import java.util.*;
 
 /**
- * Created by com.boot.demo.auto.MybatisCodeGenerate on 2018-09-13
+ * Created by com.boot.demo.auto.MybatisCodeGenerate on 2018-10-11
  */
 public class BasicAppInstaller implements java.io.Serializable {
 

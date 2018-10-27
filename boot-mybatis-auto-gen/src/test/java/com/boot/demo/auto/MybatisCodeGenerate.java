@@ -38,7 +38,7 @@ import java.util.regex.Pattern;
 @SpringBootTest
 public class MybatisCodeGenerate {
 
-    private static String[] tableNames = new String[]{"basic_app_menu_receiver"};
+    private static String[] tableNames = new String[]{"basic_app_group_rel"};
 
     // 程序会自动找到basePath
     private static String basePath = null;

@@ -30,7 +30,8 @@
 		<module>boot-druid-monitor</module>
         <module>boot-mybatis2</module>
 		<module>boot-caffeinecache</module>
-	</modules>
+        <module>boot-web-async-task</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
