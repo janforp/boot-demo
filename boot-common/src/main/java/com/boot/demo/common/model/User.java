@@ -1,8 +1,11 @@
 package com.boot.demo.common.model;
 
 import lombok.Data;
+import org.apache.commons.beanutils.BeanUtils;
 
 import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Map;
 
 /**
  * @author janita
@@ -19,4 +22,14 @@ public class User implements Serializable {
     private Integer gender;
 
     private String remark;
+
+    public static void main(String[] args) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        User user = new User();
+        user.setUserId("id123");
+        user.setUserName("姓名");
+        user.setGender(1);
+        user.setRemark("备注");
+        Map<String, String> describe = BeanUtils.describe(user);
+        System.out.println(describe);
+    }
 }
