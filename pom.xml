@@ -31,6 +31,7 @@
         <module>boot-mybatis2</module>
 		<module>boot-caffeinecache</module>
         <module>boot-web-async-task</module>
+        <module>boot-deep</module>
     </modules>
 	<packaging>pom</packaging>
 
