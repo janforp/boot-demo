@@ -17,7 +17,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
  * @since 2018/11/1 - 下午6:06
  */
 @Configuration
-public class ServerAutoConfiguration {
+public class CustomConditionalAutoConfiguration {
 
     /**
      * 此处的  Student 是否需要实例化，需要根据 @Conditional 注解中的
