@@ -8,13 +8,9 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.service.Parameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Janita
@@ -23,7 +19,7 @@ import java.util.List;
  */
 @Configuration
 @EnableSwagger2
-@ConditionalOnProperty(prefix = "swagger",value = {"enable"},havingValue = "true")
+@ConditionalOnProperty(prefix = "swagger", value = {"enable"}, havingValue = "true")
 public class SwaggerConfig {
 
 	private static final String API_PACKAGE= "com.boot.demo.swagger.controller";
