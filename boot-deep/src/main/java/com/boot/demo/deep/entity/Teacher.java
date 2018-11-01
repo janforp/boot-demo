@@ -1,4 +1,4 @@
-package com.boot.demo.deep.conditional;
+package com.boot.demo.deep.entity;
 
 /**
  * 类说明：
@@ -6,9 +6,9 @@ package com.boot.demo.deep.conditional;
  * @author janita
  * @since 2018/11/1 - 下午6:07
  */
-public class Student {
+public class Teacher {
 
-    Student() {
+    public Teacher() {
 
     }
 }
