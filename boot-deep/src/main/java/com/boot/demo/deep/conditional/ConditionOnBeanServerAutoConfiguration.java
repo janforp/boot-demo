@@ -5,7 +5,9 @@ import com.boot.demo.deep.entity.Dog;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ConditionContext;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
  * 类说明：
@@ -18,6 +20,7 @@ public class ConditionOnBeanServerAutoConfiguration {
 
     /**
      * ConditionalOnBean：只有当BeanFactory里包含指定的Bean时，才能通过匹配
+     * @see org.springframework.boot.autoconfigure.condition.OnBeanCondition#getMatchOutcome(ConditionContext, AnnotatedTypeMetadata)
      */
     @Configuration
     @ConditionalOnBean(Dog.class)

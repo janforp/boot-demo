@@ -1,0 +1,13 @@
+一、关于@Conditional
+
+二、SpringBoot中对Conditional的扩展
+
+三、基于@Configuration注册Bean分析
+
+四、基于配置文件(如：application.properties)自动配置(如：dataSource,myBatis等)的实现原理
+
+五、springBoot能解决哪一类的问题？
+
+六、springBoot与springMVC的比较
+
+七、总结
