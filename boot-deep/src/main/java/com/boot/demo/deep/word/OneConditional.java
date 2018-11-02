@@ -8,6 +8,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 /**
  * 类说明：
  * 关于@Conditional
+ * https://www.cnblogs.com/niechen/p/9047264.html?utm_source=gold_browser_extension
  *
  * @author janita
  * @since 2018/11/1 - 下午8:50
@@ -54,12 +55,12 @@ public class OneConditional {
      * 在SpringBoot中定义了一个SpringBootCondition类对Condition进行了扩展，该类源代码如下：
      * @see org.springframework.boot.autoconfigure.condition.SpringBootCondition
      * 各种不同的实现用不同的方式去实现方法
+     * 模板设计模式
      * @see org.springframework.boot.autoconfigure.condition.SpringBootCondition#getMatchOutcome(ConditionContext, AnnotatedTypeMetadata)
      * 来达到不同的条件
      * return outcome.isMatch();
      * @see ConditionOutcome#match
-     *
-     * 重写getMatchOutcome方法来进行，匹配结果的过滤
+     * springBoot通过重写getMatchOutcome方法来进行扩展，匹配结果的过滤
      *
      * springBoot的常用的实现
      * 关于 Class Conditions
@@ -67,7 +68,7 @@ public class OneConditional {
      * @see org.springframework.boot.autoconfigure.condition.ConditionalOnClass
      * @see org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass
      * 他们的匹配函数见
-     * @see OnClassCondition
+     * @see OnClassCondition#getMatchOutcome(ConditionContext, AnnotatedTypeMetadata)
      *
      * 例子
      * @see com.boot.demo.deep.conditional.ConditionOnBeanServerAutoConfiguration

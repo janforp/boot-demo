@@ -9,6 +9,7 @@ import java.util.Map;
 /**
  * 类说明：
  *
+ *
  * @author janita
  * @since 2018/11/1 - 下午5:59
  */
@@ -30,6 +31,7 @@ public class MyTestConditional implements ConfigurationCondition {
         Map<String, Object> map =
                 metadata.getAnnotationAttributes("org.springframework.context.annotation.Description");
         System.out.println(map);
-        return true;
+        return false;
+//        return true;
     }
 }
