@@ -4,6 +4,9 @@
 
 三、基于@Configuration注册Bean分析
 
+
+三，springBoot的启动原理
+
 四、基于配置文件(如：application.properties)自动配置(如：dataSource,myBatis等)的实现原理
 
 五、springBoot能解决哪一类的问题？
