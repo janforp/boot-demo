@@ -1,4 +1,4 @@
-一、关于@Conditional
+一、自动装配@EnableAutoConfigure----关于@Conditional
 
 二、SpringBoot中对Conditional的扩展
 

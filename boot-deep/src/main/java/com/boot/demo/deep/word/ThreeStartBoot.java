@@ -26,6 +26,19 @@ public class ThreeStartBoot {
 
     /**
      * 基于Spring的自定义事件
+     * 启动的时候调用的初始化方法
+     * @see org.springframework.boot.SpringApplication#SpringApplication(Object...)
+     * 实例化sprngBoot事件的一些bean
+     * @see org.springframework.boot.SpringApplication#getSpringFactoriesInstances(Class, Class[], Object...)
+     *
+     * 具体加载这些类的函数
+     * ApplicationListener 接口,ApplicationContextInitializer 接口，这些接口都是通过SpringFactoriesLoader从META-INF/spring.factories文件里加载的
+     * @see org.springframework.core.io.support.SpringFactoriesLoader#loadFactoryNames(Class, ClassLoader)
+     *
+     * 启动方法
+     * @see org.springframework.boot.SpringApplication#run(String...)
+     * 获取SpringApplicationRunListener
+     * @see org.springframework.boot.SpringApplication#getRunListeners(String[])
      *
      */
 }
