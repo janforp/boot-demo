@@ -91,4 +91,25 @@
             </otherwise>
         </choose>
     </select>
+
+    <select id="choose" resultMap="BaseResultMap" parameterType="com.boot.demo.common.model.QueryDto">
+        SELECT * FROM user
+        WHERE 1 = 1
+        <choose>
+            <when test='flag == "1"'>
+                ORDER BY remark DESC
+            </when>
+            <otherwise>
+                <choose>
+                    <when test='sortField != null and sortType != null'>
+                        ORDER BY ${sortField} ${sortType}
+                    </when>
+                    <otherwise>
+                        ORDER BY has_son
+                    </otherwise>
+                </choose>
+            </otherwise>
+        </choose>
+    </select>
+
 </mapper>

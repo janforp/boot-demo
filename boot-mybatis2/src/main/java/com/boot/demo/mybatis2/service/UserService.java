@@ -1,6 +1,7 @@
 package com.boot.demo.mybatis2.service;
 
 import com.boot.demo.common.dao.UserDAO;
+import com.boot.demo.common.enums.SortParamEnum;
 import com.boot.demo.common.model.QueryDto;
 import com.boot.demo.common.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,19 @@ public class UserService {
 
     public List<User> testChoose(QueryDto dto) {
         return userDAO.testChoose(dto);
+    }
+
+    public List<User> choose(QueryDto dto) {
+        SortParamEnum sortParamEnum = SortParamEnum.getSortParamEnum(dto.getSortField(), dto.getSortType());
+        if (sortParamEnum != null) {
+            String fieldName = sortParamEnum.getFieldName();
+            String typeName = sortParamEnum.getTypeName();
+            dto.setSortField(fieldName);
+            dto.setSortType(typeName);
+        } else {
+            dto.setSortField(null);
+            dto.setSortType(null);
+        }
+        return userDAO.choose(dto);
     }
 }

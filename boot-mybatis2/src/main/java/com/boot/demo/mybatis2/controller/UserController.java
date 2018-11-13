@@ -52,4 +52,12 @@ public class UserController {
         List<User> userList = userService.testChoose(dto);
         return ResultDTO.toSuccess(userList);
     }
+
+    @GetMapping("/choose")
+    public ResultDTO<List<User>> choose(QueryDto dto) {
+        dto.setSortField(StringUtils.isEmpty(dto.getSortField()) ? null : dto.getSortField());
+        dto.setSortType(StringUtils.isEmpty(dto.getSortType()) ? null : dto.getSortType());
+        List<User> userList = userService.choose(dto);
+        return ResultDTO.toSuccess(userList);
+    }
 }

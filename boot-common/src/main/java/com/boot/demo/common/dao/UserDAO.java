@@ -21,4 +21,6 @@ public interface UserDAO {
     int updateByPrimaryKey(User user);
 
     List<User> testChoose(QueryDto dto);
+
+    List<User> choose(QueryDto dto);
 }
