@@ -33,7 +33,9 @@
         <module>boot-web-async-task</module>
         <module>boot-deep</module>
         <module>boot-auto-redis</module>
-    </modules>
+        <module>java8-demo</module>
+		<module>pattern-matcher</module>
+	</modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
@@ -47,6 +49,7 @@
 	</parent>
 
 	<properties>
+		<java.version>1.8</java.version>
 		<swagger.version>2.6.1</swagger.version>
 		<druid.version>1.0.18</druid.version>
 		<mysql.connector.version>5.1.39</mysql.connector.version>
@@ -345,6 +348,11 @@
 				<groupId>commons-beanutils</groupId>
 				<artifactId>commons-beanutils</artifactId>
 				<version>1.9.2</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.google-collections</groupId>
+				<artifactId>google-collect</artifactId>
+				<version>snapshot-20080530</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
