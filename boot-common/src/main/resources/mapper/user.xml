@@ -34,44 +34,61 @@
         WHERE user_id = #{userId,jdbcType=VARCHAR}
     </update>
 
+    <!--<select id="testChoose" resultMap="BaseResultMap" parameterType="com.boot.demo.common.model.QueryDto">-->
+        <!--SELECT * FROM user-->
+        <!--WHERE 1 = 1-->
+        <!--<choose>-->
+            <!--<when test='flag == "1"'>-->
+                <!--ORDER BY remark DESC-->
+            <!--</when>-->
+            <!--<when test='sortField != null and sortType != null'>-->
+                <!--<if test='sortField == "1" and sortType == "1"'>-->
+                    <!--ORDER BY user_name ASC-->
+                <!--</if>-->
+                <!--<if test='sortField == "1" and sortType == "0"'>-->
+                    <!--ORDER BY user_name DESC-->
+                <!--</if>-->
+                <!--<if test='sortField == "2" and sortType == "1"'>-->
+                    <!--ORDER BY user_id ASC-->
+                <!--</if>-->
+                <!--<if test='sortField == "2" and sortType == "0"'>-->
+                    <!--ORDER BY user_id DESC-->
+                <!--</if>-->
+            <!--</when>-->
+            <!--<otherwise>-->
+                <!--ORDER BY has_son-->
+            <!--</otherwise>-->
+        <!--</choose>-->
+    <!--</select>-->
+
     <select id="testChoose" resultMap="BaseResultMap" parameterType="com.boot.demo.common.model.QueryDto">
         SELECT * FROM user
         WHERE 1 = 1
         <choose>
-            <!--<when test='flag == "1"'>-->
-                <!--ORDER BY remark DESC-->
-            <!--</when>-->
-            <when test="sortField != null and sortType != null">
-                <if test="sortField == '1' and sortType == '1' ">
-                    <![CDATA[
-                        AND 2 = 2
-                        ORDER BY user_name ASC
-                    ]]>
-                </if>
-                <if test="sortField == '1' and sortType == '0' ">
-                    <![CDATA[
-                        AND 3 = 3
-                        ORDER BY user_name DESC
-                    ]]>
-                </if>
-                <if test="sortField == '2' and sortType == '1' ">
-                    <![CDATA[
-                        AND 4 = 4
-                        ORDER BY user_id ASC
-                    ]]>
-                </if>
-                <if test="sortField == '2' and sortType == '0' ">
-                    <![CDATA[
-                        AND 5 = 5
-                        ORDER BY user_id DESC
-                    ]]>
-                </if>
+            <when test='flag == "1"'>
+                ORDER BY remark DESC
             </when>
             <otherwise>
-                AND 6 = 6
-                ORDER BY has_son
+                <choose>
+                    <when test='sortField != null and sortType != null'>
+                        <if test='sortField == "1" and sortType == "1"'>
+                            ORDER BY user_name ASC
+                        </if>
+                        <if test='sortField == "1" and sortType == "0"'>
+                            ORDER BY user_name DESC
+                        </if>
+                        <if test='sortField == "2" and sortType == "1"'>
+                            ORDER BY user_id ASC
+                        </if>
+                        <if test='sortField == "2" and sortType == "0"'>
+                            ORDER BY user_id DESC
+                        </if>
+                    </when>
+                    <otherwise>
+                        ORDER BY has_son
+                    </otherwise>
+                </choose>
             </otherwise>
         </choose>
     </select>
-
 </mapper>

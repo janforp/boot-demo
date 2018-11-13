@@ -5,6 +5,7 @@ import com.boot.demo.common.model.User;
 import com.boot.demo.common.result.ResultDTO;
 import com.boot.demo.mybatis2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,6 +47,8 @@ public class UserController {
 
     @GetMapping("/testChoose")
     public ResultDTO<List<User>> testChoose(QueryDto dto) {
+        dto.setSortField(StringUtils.isEmpty(dto.getSortField()) ? null : dto.getSortField());
+        dto.setSortType(StringUtils.isEmpty(dto.getSortType()) ? null : dto.getSortType());
         List<User> userList = userService.testChoose(dto);
         return ResultDTO.toSuccess(userList);
     }
