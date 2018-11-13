@@ -1,9 +1,12 @@
 package com.boot.demo.mybatis2.service;
 
 import com.boot.demo.common.dao.UserDAO;
+import com.boot.demo.common.model.QueryDto;
 import com.boot.demo.common.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author janita
@@ -30,5 +33,9 @@ public class UserService {
         user.setUserId("1");
         userDAO.insert(user);
         return user;
+    }
+
+    public List<User> testChoose(QueryDto dto) {
+        return userDAO.testChoose(dto);
     }
 }

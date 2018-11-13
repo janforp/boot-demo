@@ -1,5 +1,6 @@
 package com.boot.demo.mybatis2.controller;
 
+import com.boot.demo.common.model.QueryDto;
 import com.boot.demo.common.model.User;
 import com.boot.demo.common.result.ResultDTO;
 import com.boot.demo.mybatis2.service.UserService;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author janita
@@ -39,5 +42,11 @@ public class UserController {
     public ResultDTO<User> findById(@PathVariable("userId") String userId) {
         User user = userService.findById(userId);
         return ResultDTO.toSuccess(user);
+    }
+
+    @GetMapping("/testChoose")
+    public ResultDTO<List<User>> testChoose(QueryDto dto) {
+        List<User> userList = userService.testChoose(dto);
+        return ResultDTO.toSuccess(userList);
     }
 }

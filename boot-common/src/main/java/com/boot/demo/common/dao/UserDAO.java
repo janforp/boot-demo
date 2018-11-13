@@ -1,6 +1,9 @@
 package com.boot.demo.common.dao;
 
+import com.boot.demo.common.model.QueryDto;
 import com.boot.demo.common.model.User;
+
+import java.util.List;
 
 /**
  * @author janita
@@ -16,4 +19,6 @@ public interface UserDAO {
     User selectByPrimaryKey(String userId);
 
     int updateByPrimaryKey(User user);
+
+    List<User> testChoose(QueryDto dto);
 }
