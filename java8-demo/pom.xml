@@ -16,5 +16,10 @@
             <groupId>com.google.code.google-collections</groupId>
             <artifactId>google-collect</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.boot.demo</groupId>
+            <artifactId>boot-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

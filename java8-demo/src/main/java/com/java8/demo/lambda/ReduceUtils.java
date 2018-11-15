@@ -1,6 +1,9 @@
 package com.java8.demo.lambda;
 
+import com.boot.demo.common.model.User;
+import com.boot.demo.common.model.UserDto;
 import com.google.common.collect.Lists;
+import org.springframework.beans.BeanUtils;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -47,5 +50,20 @@ public class ReduceUtils {
 
         BigDecimal bigDecimal = reduceBigDecimal(decimalList);
         System.out.println("****" + bigDecimal);
+
+        User user = new User();
+        user.setRemark("remark");
+        user.setGender(1);
+        user.setUserName("userName");
+        user.setUserId("userId");
+        UserDto transorm = transorm(user);
+
+        System.out.println("*****" + transorm);
+    }
+
+    private static UserDto transorm(User user) {
+        UserDto dto = new UserDto();
+        BeanUtils.copyProperties(user, dto);
+        return dto;
     }
 }
