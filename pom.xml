@@ -35,7 +35,8 @@
         <module>boot-auto-redis</module>
         <module>java8-demo</module>
 		<module>pattern-matcher</module>
-	</modules>
+        <module>xml-module</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
