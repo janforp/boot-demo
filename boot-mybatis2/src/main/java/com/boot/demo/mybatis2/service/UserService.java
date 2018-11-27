@@ -31,7 +31,6 @@ public class UserService {
     }
 
     public User addUser(User user) {
-        user.setUserId("1");
         userDAO.insert(user);
         return user;
     }
