@@ -99,11 +99,31 @@ public class TimeBucket {
             .toString();
     }
 
+    /**
+     * a.setLeaseBeginDate(DateUtils.parse("2018-01-01", DateUtils.Y_M_D));
+     *         a.setLeaseEndDate(DateUtils.parse("2018-05-31", DateUtils.Y_M_D));
+     *
+     *         RentDTO a2 = new RentDTO();
+     *         a2.setId(2L);
+     *         a2.setDataSource(DataSourceEnum.GOV.getCode());
+     *         a2.setDeductYear("2018");
+     *         a2.setLeaseBeginDate(DateUtils.parse("2018-02-01", DateUtils.Y_M_D));
+     *         a2.setLeaseEndDate(DateUtils.parse("2018-03-31", DateUtils.Y_M_D));
+     *
+     *         RentDTO b = new RentDTO();
+     *         b.setId(3L);
+     *         b.setDataSource(DataSourceEnum.GOV.getCode());
+     *         b.setDeductYear("2018");
+     *         b.setLeaseBeginDate(DateUtils.parse("2018-05-31", DateUtils.Y_M_D));
+     *         b.setLeaseEndDate(DateUtils.parse("2018-7-31", DateUtils.Y_M_D));
+     * @param args
+     * @throws ParseException
+     */
     public static void main(String[] args) throws ParseException {
         TimeBucket[] buckets = {
-            new TimeBucket("2018-05-02", "2018-06-10"),
-            new TimeBucket("2018-06-02", "2018-10-29"),
-            new TimeBucket("2018-05-03", "2018-05-31")
+            new TimeBucket("2018-01-01", "2018-05-33"),
+            new TimeBucket("2018-02-01", "2018-03-30"),
+            new TimeBucket("2018-05-01", "2018-07-30")
         };
         TimeBucket union = TimeBucket.union(buckets);
         if (null != union) {
