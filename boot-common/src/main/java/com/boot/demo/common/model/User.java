@@ -1,6 +1,8 @@
 package com.boot.demo.common.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.io.Serializable;
@@ -13,6 +15,8 @@ import java.util.Map;
  * 类说明：
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
 
     private String userId;

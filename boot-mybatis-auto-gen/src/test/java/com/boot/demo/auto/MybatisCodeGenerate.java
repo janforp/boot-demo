@@ -38,7 +38,7 @@ import java.util.regex.Pattern;
 @SpringBootTest
 public class MybatisCodeGenerate {
 
-    private static String[] tableNames = new String[]{"sti_test_table"};
+    private static String[] tableNames = new String[]{"sti_generate_accumulate_snapshot_record"};
 
     // 程序会自动找到basePath
     private static String basePath = null;
@@ -239,7 +239,7 @@ public class MybatisCodeGenerate {
 
             String comment = columnCommentMap.get(column);
             if (comment != null) {
-                buf.append("    ").append("// ").append(comment).append(newLine);
+                buf.append("    ").append("    /** ").append(newLine).append("         * ").append(comment).append(newLine).append("    */").append(newLine);
             }
             buf.append("    ").append("private ").append(javaType).append(" ").append(propertyName)
                     .append(";").append(newLine);
