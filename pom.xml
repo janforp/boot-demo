@@ -38,6 +38,7 @@
         <module>xml-module</module>
         <module>java-learn</module>
         <module>head-first</module>
+        <module>leet-code</module>
     </modules>
 	<packaging>pom</packaging>
 
