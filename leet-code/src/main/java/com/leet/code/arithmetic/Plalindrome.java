@@ -1,5 +1,7 @@
 package com.leet.code.arithmetic;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Arrays;
 
 /**
@@ -23,6 +25,7 @@ import java.util.Arrays;
  * @author janita
  * @since 2019-06-10 - 10:45
  */
+@UtilityClass
 public class Plalindrome {
 
     private static String getPlalindrome(String source) {
@@ -56,9 +59,5 @@ public class Plalindrome {
             }
         }
         return longestStr;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getPlalindrome("1233443325"));
     }
 }
