@@ -1,5 +1,7 @@
 package com.leet.code.arithmetic;
 
+import java.util.Arrays;
+
 /**
  * 类说明：
  * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
@@ -24,6 +26,39 @@ package com.leet.code.arithmetic;
 public class Plalindrome {
 
     private static String getPlalindrome(String source) {
-        return null;
+        if (source == null || source.length() == 0) {
+            return source;
+        }
+        char[] chars = source.toCharArray();
+        char[] reverseChars = new char[chars.length];
+        for (int i = chars.length - 1; i >= 0; i--) {
+            reverseChars[chars.length - 1 -i] = chars[i];
+        }
+        String a;
+        String b;
+        String longestStr = "";
+        for (int i = 0; i < chars.length; i++) {
+            char charI = chars[i];
+            for (int j = 0; j < reverseChars.length; j++) {
+                if (i + j >= chars.length) {
+                    continue;
+                }
+                char charJ = reverseChars[j];
+                if (charI == charJ) {
+                    a = new String(Arrays.copyOfRange(chars, i,chars.length - j));
+                    b = new String(Arrays.copyOfRange(reverseChars, j, chars.length - i));
+                    if (a.equals(b)) {
+                        if (a.length() > longestStr.length()) {
+                            longestStr = a;
+                        }
+                    }
+                }
+            }
+        }
+        return longestStr;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getPlalindrome("123321"));
     }
 }
