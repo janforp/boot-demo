@@ -59,6 +59,6 @@ public class Plalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(getPlalindrome("123321"));
+        System.out.println(getPlalindrome("1233443325"));
     }
 }
