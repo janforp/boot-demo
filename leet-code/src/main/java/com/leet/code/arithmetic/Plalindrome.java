@@ -44,7 +44,7 @@ public class Plalindrome {
             char charI = chars[i];
             for (int j = 0; j < reverseChars.length; j++) {
                 if (i + j >= chars.length) {
-                    continue;
+                    break;
                 }
                 char charJ = reverseChars[j];
                 if (charI == charJ) {
@@ -59,5 +59,9 @@ public class Plalindrome {
             }
         }
         return longestStr;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getPlalindrome("123456654321"));
     }
 }
