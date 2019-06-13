@@ -1,8 +1,11 @@
 package com.leet.code.arithmetic;
 
+import com.boot.demo.common.model.UserDto;
 import com.google.common.collect.Lists;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 类说明：
@@ -29,7 +32,15 @@ public class InnerPage {
         return list.subList(fromIndex, toIndex);
     }
 
+    private static List<Integer> page2(Integer pageNo, Integer pageSize) {
+        return list.stream()
+            .sorted(Comparator.comparing(item -> item))
+            .skip((long) ((pageNo - 1) * pageSize))
+            .limit(pageSize)
+            .collect(Collectors.toList());
+    }
+
     public static void main(String[] args) {
-        System.out.println(page(5, 2));
+        System.out.println(page2(1,5));
     }
 }

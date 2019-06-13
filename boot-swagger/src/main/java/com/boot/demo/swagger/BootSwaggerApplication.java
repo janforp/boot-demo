@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author janita
  * @since 2018/9/9 - 上午10:41
- * 类说明：http://localhost:9004/swagger-ui.html
+ * 类说明：http://localhost:9111/swagger-ui.html
  */
 @SpringBootApplication
 public class BootSwaggerApplication {
