@@ -39,6 +39,7 @@
         <module>java-learn</module>
         <module>head-first</module>
         <module>leet-code</module>
+        <module>design-pattern</module>
     </modules>
 	<packaging>pom</packaging>
 

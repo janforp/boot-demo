@@ -38,7 +38,7 @@ import java.util.regex.Pattern;
 @SpringBootTest
 public class MybatisCodeGenerate {
 
-    private static String[] tableNames = new String[]{"sti_generate_accumulate_snapshot_record"};
+    private static String[] tableNames = new String[]{"opentax_agency_info"};
 
     // 程序会自动找到basePath
     private static String basePath = null;
