@@ -1,4 +1,4 @@
-package com.janita.design.c2观察者.version1;
+package com.janita.design.c2观察者;
 
 /**
  * 类说明：

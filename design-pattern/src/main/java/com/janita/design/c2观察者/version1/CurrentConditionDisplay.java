@@ -1,12 +1,14 @@
 package com.janita.design.c2观察者.version1;
 
+import com.janita.design.c2观察者.DisplayElement;
+
 /**
  * 类说明：
  *
  * @author zhucj
  * @since 2019-06-16 - 11:56
  */
-public class CurrentConditionDisplay implements Observer, DisplayElement{
+public class CurrentConditionDisplay implements Observer, DisplayElement {
 
     private float temperature;
 
