@@ -1,6 +1,4 @@
-package com.janita.design.design1.fly;
-
-import com.janita.design.design1.fly.FlyBehavior;
+package com.janita.design.c1策略模式.fly;
 
 /**
  * 类说明：

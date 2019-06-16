@@ -1,9 +1,8 @@
-package com.janita.design.design1;
+package com.janita.design.c1策略模式.test;
 
-import com.janita.design.design1.duck.Duck;
-import com.janita.design.design1.duck.MallardDuck;
-import com.janita.design.design1.duck.ModelDuck;
-import com.janita.design.design1.fly.FlyRocketPowered;
+import com.janita.design.c1策略模式.duck.Duck;
+import com.janita.design.c1策略模式.duck.ModelDuck;
+import com.janita.design.c1策略模式.fly.FlyRocketPowered;
 
 /**
  * 类说明：
@@ -16,6 +15,7 @@ public class MiniDuckSimulator2 {
     public static void main(String[] args) {
         Duck model = new ModelDuck();
         model.performFly();
+        //支持动态变化行为
         model.setFlyBehavior(new FlyRocketPowered());
         model.performFly();
     }

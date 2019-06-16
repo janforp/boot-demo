@@ -1,7 +1,7 @@
-package com.janita.design.design1;
+package com.janita.design.c1策略模式.test;
 
-import com.janita.design.design1.duck.Duck;
-import com.janita.design.design1.duck.MallardDuck;
+import com.janita.design.c1策略模式.duck.Duck;
+import com.janita.design.c1策略模式.duck.MallardDuck;
 
 /**
  * 类说明：

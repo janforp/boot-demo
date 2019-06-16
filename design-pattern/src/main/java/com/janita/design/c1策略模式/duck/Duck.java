@@ -1,7 +1,7 @@
-package com.janita.design.design1.duck;
+package com.janita.design.c1策略模式.duck;
 
-import com.janita.design.design1.fly.FlyBehavior;
-import com.janita.design.design1.quack.QuackBehavior;
+import com.janita.design.c1策略模式.fly.FlyBehavior;
+import com.janita.design.c1策略模式.quack.QuackBehavior;
 import lombok.Setter;
 
 /**

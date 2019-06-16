@@ -1,4 +1,4 @@
-package com.janita.design.design1.fly;
+package com.janita.design.c1策略模式.fly;
 
 /**
  * 类说明：

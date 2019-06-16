@@ -1,6 +1,4 @@
-package com.janita.design.design1.quack;
-
-import com.janita.design.design1.quack.QuackBehavior;
+package com.janita.design.c1策略模式.quack;
 
 /**
  * 类说明：

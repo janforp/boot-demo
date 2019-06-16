@@ -1,8 +1,7 @@
-package com.janita.design.design1.duck;
+package com.janita.design.c1策略模式.duck;
 
-import com.janita.design.design1.duck.Duck;
-import com.janita.design.design1.fly.FlyOnWay;
-import com.janita.design.design1.quack.Quack;
+import com.janita.design.c1策略模式.fly.FlyOnWay;
+import com.janita.design.c1策略模式.quack.Quack;
 
 /**
  * 类说明：
