@@ -40,6 +40,7 @@
         <module>head-first</module>
         <module>leet-code</module>
         <module>design-pattern</module>
+        <module>java核心技术36讲</module>
     </modules>
 	<packaging>pom</packaging>
 
