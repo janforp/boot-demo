@@ -13,6 +13,11 @@ public class NoCommand implements Command {
     }
 
     @Override
+    public void undo() {
+        System.out.println("错误的操作");
+    }
+
+    @Override
     public String toString() {
         return "没有绑定设备";
     }

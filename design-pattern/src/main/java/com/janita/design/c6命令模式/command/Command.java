@@ -9,4 +9,6 @@ package com.janita.design.c6命令模式.command;
 public interface Command {
 
     void execute();
+
+    void undo();
 }
