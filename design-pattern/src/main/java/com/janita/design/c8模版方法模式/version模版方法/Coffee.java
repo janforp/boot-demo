@@ -1,4 +1,4 @@
-package com.janita.design.c8模版方法模式.version2;
+package com.janita.design.c8模版方法模式.version模版方法;
 
 /**
  * 类说明：
@@ -6,7 +6,7 @@ package com.janita.design.c8模版方法模式.version2;
  * @author zhucj
  * @since 2019-06-24 - 19:25
  */
-public class Coffee extends CaffeineBeverage{
+public class Coffee extends CaffeineBeverageWithHook {
 
     @Override
     void brew() {
