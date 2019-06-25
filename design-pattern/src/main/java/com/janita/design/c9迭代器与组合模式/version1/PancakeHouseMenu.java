@@ -1,4 +1,4 @@
-package com.janita.design.c9迭代器与组合模式;
+package com.janita.design.c9迭代器与组合模式.version1;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author zhucj
  * @since 2019-06-25 - 16:24
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
 
     ArrayList<MenuItem> menuItems;
     int postion = 0;
@@ -31,7 +31,8 @@ public class PancakeHouseMenu {
         return menuItems;
     }
 
-    public Iterator<MenuItem> createIterator() {
+    @Override
+    public java.util.Iterator<MenuItem> createIterator() {
         return new PancakeHouseMenuIterator(menuItems);
     }
 }

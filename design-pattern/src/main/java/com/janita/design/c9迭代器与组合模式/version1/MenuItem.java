@@ -1,4 +1,4 @@
-package com.janita.design.c9迭代器与组合模式;
+package com.janita.design.c9迭代器与组合模式.version1;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

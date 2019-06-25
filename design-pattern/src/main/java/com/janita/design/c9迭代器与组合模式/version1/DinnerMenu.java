@@ -1,4 +1,4 @@
-package com.janita.design.c9迭代器与组合模式;
+package com.janita.design.c9迭代器与组合模式.version1;
 
 /**
  * 类说明：
@@ -6,7 +6,7 @@ package com.janita.design.c9迭代器与组合模式;
  * @author zhucj
  * @since 2019-06-25 - 16:29
  */
-public class DinnerMenu {
+public class DinnerMenu implements Menu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -33,7 +33,8 @@ public class DinnerMenu {
         return menuItems;
     }
 
-    public Iterator<MenuItem> createIterator() {
+    @Override
+    public java.util.Iterator<MenuItem> createIterator() {
         return new DinnerMenuIterator(menuItems);
     }
 }

@@ -1,4 +1,4 @@
-package com.janita.design.c9迭代器与组合模式;
+package com.janita.design.c9迭代器与组合模式.version1;
 
 /**
  * 类说明：
@@ -6,7 +6,7 @@ package com.janita.design.c9迭代器与组合模式;
  * @author zhucj
  * @since 2019-06-25 - 16:29
  */
-public class DinnerMenuIterator implements Iterator<MenuItem> {
+public class DinnerMenuIterator implements java.util.Iterator<MenuItem> {
 
     MenuItem[] items;
     int positon = 0;
