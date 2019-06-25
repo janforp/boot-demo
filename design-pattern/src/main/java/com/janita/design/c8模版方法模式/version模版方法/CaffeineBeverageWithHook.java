@@ -1,5 +1,7 @@
 package com.janita.design.c8模版方法模式.version模版方法;
 
+import java.util.Arrays;
+
 /**
  * 类说明：模版方法模式
  * <p>
