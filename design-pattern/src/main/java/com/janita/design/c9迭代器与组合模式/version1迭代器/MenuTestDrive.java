@@ -1,4 +1,4 @@
-package com.janita.design.c9迭代器与组合模式.version1;
+package com.janita.design.c9迭代器与组合模式.version1迭代器;
 
 import java.util.ArrayList;
 import java.util.List;
