@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.Iterator;
+
 /**
  * 类说明：菜单项 --- 叶子节点（leaf）
  *
@@ -51,5 +53,10 @@ public class MenuItem extends MenuComponent {
         }
         System.out.println(" , " + getPrice());
         System.out.println(" --- " + getDescription());
+    }
+
+    @Override
+    public Iterator<MenuComponent> createIterator() {
+        throw new UnsupportedOperationException();
     }
 }
