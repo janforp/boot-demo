@@ -1,4 +1,4 @@
-package com.janita.design.c11代理模式;
+package com.janita.design.c11代理模式.rmi;
 
 import com.janita.design.c11代理模式.糖果机.GumballMachineBaseState;
 
