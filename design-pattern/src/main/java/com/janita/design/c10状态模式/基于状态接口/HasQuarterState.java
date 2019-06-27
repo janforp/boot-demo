@@ -1,5 +1,7 @@
 package com.janita.design.c10状态模式.基于状态接口;
 
+import java.util.Random;
+
 import static com.boot.demo.common.util.CommonUtils.print;
 
 /**
@@ -11,6 +13,8 @@ import static com.boot.demo.common.util.CommonUtils.print;
 public class HasQuarterState implements State {
 
     private GumballMachineBaseState machine;
+
+    private Random randomWinner = new Random(System.currentTimeMillis());
 
     public HasQuarterState(GumballMachineBaseState machineBaseState) {
         this.machine = machineBaseState;
@@ -30,7 +34,12 @@ public class HasQuarterState implements State {
     @Override
     public void turnCrank() {
         print("Your turned...");
-        machine.setState(machine.getSoldState());
+        int winner = randomWinner.nextInt(10);
+        if (winner == 0 && machine.getCount() > 1) {
+            machine.setState(machine.getWinnerState());
+        } else {
+            machine.setState(machine.getSoldState());
+        }
     }
 
     @Override

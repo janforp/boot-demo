@@ -29,6 +29,9 @@ public class GumballMachineBaseState {
     private State soldState;
 
     @Getter
+    private State winnerState;
+
+    @Getter
     private int count = 0;
 
     public GumballMachineBaseState(int numberGumballs) {
@@ -36,6 +39,7 @@ public class GumballMachineBaseState {
         this.noQuarterState = new NoQuarterState(this);
         this.hasQuarterState = new HasQuarterState(this);
         this.soldState = new SoldState(this);
+        this.winnerState = new WinnerState(this);
         this.state = soldOutState;
         this.count = numberGumballs;
         if (numberGumballs > 0) {
@@ -61,5 +65,26 @@ public class GumballMachineBaseState {
         if (count != 0) {
             count --;
         }
+    }
+
+    @Override
+    public String toString() {
+        return ("还有" + count + "个糖果" + "，状态是 " + decideSate());
+    }
+
+    private String decideSate() {
+        if (state instanceof SoldOutState) {
+            return "没有糖果了";
+        }
+        if (state instanceof NoQuarterState) {
+            return "没有25美分";
+        }
+        if (state instanceof HasQuarterState) {
+            return "投入了25美分";
+        }
+        if (state instanceof SoldState) {
+            return "正在出糖果";
+        }
+        return "";
     }
 }
