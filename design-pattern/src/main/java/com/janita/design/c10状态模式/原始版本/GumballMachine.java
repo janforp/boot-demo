@@ -1,5 +1,4 @@
-package com.janita.design.c10状态模式;
-
+package com.janita.design.c10状态模式.原始版本;
 
 import static com.boot.demo.common.util.CommonUtils.print;
 
@@ -38,7 +37,7 @@ public class GumballMachine {
 
     public void insertQuarter() {
         if (state == HAS_QUARTER) {
-            print("You can't instert another quarter");
+            print("You can't insert another quarter");
             return;
         }
         if (state == NO_QUARTER) {

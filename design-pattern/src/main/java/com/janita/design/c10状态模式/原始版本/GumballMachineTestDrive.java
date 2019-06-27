@@ -1,4 +1,4 @@
-package com.janita.design.c10状态模式;
+package com.janita.design.c10状态模式.原始版本;
 
 import static com.boot.demo.common.util.CommonUtils.print;
 import static com.boot.demo.common.util.CommonUtils.printSep;
