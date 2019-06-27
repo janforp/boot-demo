@@ -87,4 +87,9 @@ public class GumballMachineBaseState {
         }
         return "";
     }
+
+    void refill(int count) {
+        this.count = count;
+        this.state = noQuarterState;
+    }
 }
