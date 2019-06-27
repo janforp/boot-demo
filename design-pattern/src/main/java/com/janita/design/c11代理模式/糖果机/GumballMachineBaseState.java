@@ -1,4 +1,4 @@
-package com.janita.design.c10状态模式.基于状态接口;
+package com.janita.design.c11代理模式.糖果机;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +13,7 @@ import static com.boot.demo.common.util.CommonUtils.print;
  */
 public class GumballMachineBaseState {
 
+    @Getter
     @Setter
     private State state;
 
@@ -34,12 +35,16 @@ public class GumballMachineBaseState {
     @Getter
     private int count;
 
-    public GumballMachineBaseState(int numberGumballs) {
+    @Getter
+    private String locationCode;
+
+    public GumballMachineBaseState(String locationCode, int numberGumballs) {
         this.soldOutState = new SoldOutState(this);
         this.noQuarterState = new NoQuarterState(this);
         this.hasQuarterState = new HasQuarterState(this);
         this.soldState = new SoldState(this);
         this.winnerState = new WinnerState(this);
+        this.locationCode = locationCode;
         this.state = soldOutState;
         this.count = numberGumballs;
         if (numberGumballs > 0) {
