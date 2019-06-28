@@ -1,5 +1,7 @@
-package com.janita.design.c12复合模式;
+package com.janita.design.c12复合模式.duck;
 
+
+import com.janita.design.c12复合模式.Quackable;
 
 import static com.boot.demo.common.util.CommonUtils.print;
 
@@ -12,6 +14,6 @@ import static com.boot.demo.common.util.CommonUtils.print;
 public class RedHeadDuck implements Quackable {
     @Override
     public void quack() {
-        print("RedHeadDuck === Quack");
+        print("RedHeadDuck（红头鸭） === Quack（嘎嘎）");
     }
 }
