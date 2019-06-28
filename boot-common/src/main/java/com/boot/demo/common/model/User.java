@@ -1,6 +1,7 @@
 package com.boot.demo.common.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.beanutils.BeanUtils;
@@ -17,6 +18,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class User implements Serializable {
 
     private String userId;

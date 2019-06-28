@@ -8,7 +8,7 @@ import static com.boot.demo.common.util.CommonUtils.print;
  * @author zhucj
  * @since 2019-06-28 - 16:19
  */
-public class Quackologist implements Observer{
+public class Quackologist implements Observer {
     @Override
     public void update(QuackObservable duck) {
         print("嘎嘎叫学家：" + duck + "刚刚叫了");
