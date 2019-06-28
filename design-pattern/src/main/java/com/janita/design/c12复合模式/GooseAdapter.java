@@ -1,5 +1,6 @@
 package com.janita.design.c12复合模式;
 
+import com.janita.design.c12复合模式.观察者.Observer;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -18,5 +19,15 @@ public class GooseAdapter implements Quackable {
     @Override
     public void quack() {
         goose.honk();
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+
+    }
+
+    @Override
+    public void notifyObservers() {
+
     }
 }
