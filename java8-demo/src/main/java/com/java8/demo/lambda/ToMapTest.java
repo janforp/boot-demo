@@ -45,7 +45,7 @@ public class ToMapTest {
 
     private static void testToMap() {
         List<User> users =
-            Lists.newArrayList(User.builder().userId(null).userName("李四").build(), User.builder().userId("2").userName("张三").build());
+            Lists.newArrayList(User.builder().userId(null).userName("李四").build(), User.builder().userId("2").userName(null).build());
         Map<String, String> map = users.stream().collect(Collectors.toMap(User::getUserId, User::getUserName));
         System.out.println(map);
     }
