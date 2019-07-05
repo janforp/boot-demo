@@ -26,5 +26,10 @@
             <artifactId>japter-core</artifactId>
             <version>1.2.0-RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
+        </dependency>
     </dependencies>
 </project>

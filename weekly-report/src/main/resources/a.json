@@ -1,0 +1,4102 @@
+{
+  "current": {
+    "head": {
+      "code": "00000000",
+      "description": "成功",
+      "msg": "成功",
+      "time": "2019-07-05 15:54:34",
+      "status": "Y"
+    },
+    "body": {
+      "数据访问层异常统计": {
+        "heads": [
+          "daoName",
+          "daoMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "daoMethodName": "方法名",
+          "daoName": "类名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "460",
+            "mAXelapsed": "5194.0",
+            "aVGelapsed": "5016.39",
+            "daoMethodName": "queryEmployeesTaxBill",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "51",
+            "mAXelapsed": "5030.0",
+            "aVGelapsed": "5013.51",
+            "daoMethodName": "updateTaxDetailSawState",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "22",
+            "mAXelapsed": "3650.0",
+            "aVGelapsed": "783.73",
+            "daoMethodName": "insert",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "150",
+            "mAXelapsed": "5100.0",
+            "aVGelapsed": "5012.53",
+            "daoMethodName": "queryPersonalIncomeTaxByDeclareIdList",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "37",
+            "mAXelapsed": "63.0",
+            "aVGelapsed": "30.3",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "5010.0",
+            "aVGelapsed": "5009.5",
+            "daoMethodName": "queryPayrollDetail",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "21",
+            "mAXelapsed": "5021.0",
+            "aVGelapsed": "253.95",
+            "daoMethodName": "update",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "7",
+            "mAXelapsed": "5300.0",
+            "aVGelapsed": "5053.43",
+            "daoMethodName": "selectByCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "5016.0",
+            "aVGelapsed": "5012.33",
+            "daoMethodName": "selectAllByCompanyId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "8",
+            "mAXelapsed": "5012.0",
+            "aVGelapsed": "5010.0",
+            "daoMethodName": "queryPayrollDetailByEmployeeId",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5077.0",
+            "aVGelapsed": "5077.0",
+            "daoMethodName": "queryDetailByEmployeeIdAndMonthInterval",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5013.0",
+            "aVGelapsed": "5013.0",
+            "daoMethodName": "updatePayrollDetail",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "8",
+            "mAXelapsed": "5028.0",
+            "aVGelapsed": "5015.88",
+            "daoMethodName": "statisticsTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "5",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "5010.0",
+            "daoMethodName": "queryPayrollByPayrollIdList",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "5011.0",
+            "daoMethodName": "queryPayrollByCondition",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "5010.33",
+            "daoMethodName": "queryPayrollRawByExcelCacheId",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "77.0",
+            "aVGelapsed": "72.5",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "5013.0",
+            "aVGelapsed": "5010.33",
+            "daoMethodName": "selectByCompanyId",
+            "daoName": "EmployeeDepartmentMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "5009.0",
+            "aVGelapsed": "5008.5",
+            "daoMethodName": "queryComputeRule",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5016.0",
+            "aVGelapsed": "5016.0",
+            "daoMethodName": "insertIgnore",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "5052.0",
+            "aVGelapsed": "5041.0",
+            "daoMethodName": "selectByCompanyId",
+            "daoName": "RemindDaysMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5012.0",
+            "aVGelapsed": "5012.0",
+            "daoMethodName": "deleteDimission",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5010.0",
+            "aVGelapsed": "5010.0",
+            "daoMethodName": "getPayrollRule",
+            "daoName": "PayrollRuleMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5010.0",
+            "aVGelapsed": "5010.0",
+            "daoMethodName": "setRatalInValid",
+            "daoName": "SnapshootRatalMapper"
+          }
+        ]
+      },
+      "数据访问层统计": {
+        "heads": [
+          "daoName",
+          "daoMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "daoMethodName": "方法名",
+          "daoName": "类名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "1026544",
+            "mAXelapsed": "5012.0",
+            "aVGelapsed": "11.88",
+            "daoMethodName": "queryPayrollDetailByEmployeeId",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "226640",
+            "mAXelapsed": "5077.0",
+            "aVGelapsed": "11.35",
+            "daoMethodName": "queryDetailByEmployeeIdAndMonthInterval",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "173550",
+            "mAXelapsed": "6693.0",
+            "aVGelapsed": "16.78",
+            "daoMethodName": "updatePayrollDetail",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "47053",
+            "mAXelapsed": "668.0",
+            "aVGelapsed": "21.48",
+            "daoMethodName": "queryPayrollDetail",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "17545",
+            "mAXelapsed": "38939.0",
+            "aVGelapsed": "50.19",
+            "daoMethodName": "getRepeatPayrollEmployee",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "13416",
+            "mAXelapsed": "261.0",
+            "aVGelapsed": "10.66",
+            "daoMethodName": "statistics",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "13378",
+            "mAXelapsed": "181.0",
+            "aVGelapsed": "10.3",
+            "daoMethodName": "getEmpIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "10725",
+            "mAXelapsed": "1190.0",
+            "aVGelapsed": "40.57",
+            "daoMethodName": "queryPayrollDetailByPayrollIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "10634",
+            "mAXelapsed": "2961.0",
+            "aVGelapsed": "55.24",
+            "daoMethodName": "insert",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "9464",
+            "mAXelapsed": "1290.0",
+            "aVGelapsed": "32.8",
+            "daoMethodName": "queryPayrollDetailByPage",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "2934",
+            "mAXelapsed": "675.0",
+            "aVGelapsed": "24.86",
+            "daoMethodName": "updateByPayrollIdUnvalid",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "2747",
+            "mAXelapsed": "476.0",
+            "aVGelapsed": "22.81",
+            "daoMethodName": "checkPayrollDelete",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "2682",
+            "mAXelapsed": "535.0",
+            "aVGelapsed": "28.83",
+            "daoMethodName": "getInvidualPayrollEmployeeIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1090",
+            "mAXelapsed": "237.0",
+            "aVGelapsed": "8.24",
+            "daoMethodName": "getSalaryEmpIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "102",
+            "mAXelapsed": "27.0",
+            "aVGelapsed": "12.32",
+            "daoMethodName": "queryPayrollDetailByPayrollDetailId",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1230887",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "11.56",
+            "daoMethodName": "queryPayrollByPayrollIdList",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "152971",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "12.69",
+            "daoMethodName": "queryPayrollByCondition",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "58942",
+            "mAXelapsed": "223.0",
+            "aVGelapsed": "8.69",
+            "daoMethodName": "queryPayrollByPayrollId",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "20704",
+            "mAXelapsed": "581.0",
+            "aVGelapsed": "10.39",
+            "daoMethodName": "queryPayrollByMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "12421",
+            "mAXelapsed": "413.0",
+            "aVGelapsed": "9.82",
+            "daoMethodName": "queryHasPayrollMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "10634",
+            "mAXelapsed": "185.0",
+            "aVGelapsed": "12.2",
+            "daoMethodName": "saveOrUpdate",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "6124",
+            "mAXelapsed": "227.0",
+            "aVGelapsed": "9.04",
+            "daoMethodName": "queryMaxPayrollByMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "5055",
+            "mAXelapsed": "215.0",
+            "aVGelapsed": "11.58",
+            "daoMethodName": "updatePayroll",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "2934",
+            "mAXelapsed": "140.0",
+            "aVGelapsed": "10.74",
+            "daoMethodName": "updatePayrollUnvalid",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "685040",
+            "mAXelapsed": "41149.0",
+            "aVGelapsed": "62.07",
+            "daoMethodName": "queryEmployeesTaxBill",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "189814",
+            "mAXelapsed": "5340.0",
+            "aVGelapsed": "20.12",
+            "daoMethodName": "updateTaxDetailSawState",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "10427",
+            "mAXelapsed": "1304.0",
+            "aVGelapsed": "25.05",
+            "daoMethodName": "queryPersonalIncomeTaxDetailList",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "10425",
+            "mAXelapsed": "7606.0",
+            "aVGelapsed": "65.89",
+            "daoMethodName": "insert",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "1516",
+            "mAXelapsed": "299.0",
+            "aVGelapsed": "17.17",
+            "daoMethodName": "queryPushDetailCollection",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "523",
+            "mAXelapsed": "633.0",
+            "aVGelapsed": "17.56",
+            "daoMethodName": "deleteTaxDetailByDeclareId",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "424",
+            "mAXelapsed": "107.0",
+            "aVGelapsed": "29.76",
+            "daoMethodName": "queryGroupByIdentification",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "358",
+            "mAXelapsed": "41.0",
+            "aVGelapsed": "19.75",
+            "daoMethodName": "updateEmployeeId",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "284529",
+            "mAXelapsed": "7269.0",
+            "aVGelapsed": "29.31",
+            "daoMethodName": "selectByCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "188670",
+            "mAXelapsed": "7545.0",
+            "aVGelapsed": "37.06",
+            "daoMethodName": "selectAllByCompanyId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "165889",
+            "mAXelapsed": "5052.0",
+            "aVGelapsed": "10.96",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "90353",
+            "mAXelapsed": "43284.0",
+            "aVGelapsed": "41.05",
+            "daoMethodName": "update",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "26870",
+            "mAXelapsed": "5566.0",
+            "aVGelapsed": "35.11",
+            "daoMethodName": "selectByEmployeeIds",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "15103",
+            "mAXelapsed": "3146.0",
+            "aVGelapsed": "23.37",
+            "daoMethodName": "selectByOtherCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "9088",
+            "mAXelapsed": "10899.0",
+            "aVGelapsed": "24.49",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "2146",
+            "mAXelapsed": "19519.0",
+            "aVGelapsed": "90.83",
+            "daoMethodName": "deleteByEmployeeId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "663942",
+            "mAXelapsed": "5100.0",
+            "aVGelapsed": "12.22",
+            "daoMethodName": "queryPersonalIncomeTaxByDeclareIdList",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "20852",
+            "mAXelapsed": "233.0",
+            "aVGelapsed": "7.69",
+            "daoMethodName": "queryPersonalIncomeTaxByMonth",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "9902",
+            "mAXelapsed": "200.0",
+            "aVGelapsed": "10.63",
+            "daoMethodName": "insert",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "1008",
+            "mAXelapsed": "91.0",
+            "aVGelapsed": "14.77",
+            "daoMethodName": "queryPersonalIncomeTaxPage",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "523",
+            "mAXelapsed": "34.0",
+            "aVGelapsed": "11.29",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "630015",
+            "mAXelapsed": "650.0",
+            "aVGelapsed": "9.39",
+            "daoMethodName": "findByWebUserId",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "41921",
+            "mAXelapsed": "754.0",
+            "aVGelapsed": "11.18",
+            "daoMethodName": "queryRelationByEmployee",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "9285",
+            "mAXelapsed": "184.0",
+            "aVGelapsed": "19.85",
+            "daoMethodName": "insertSelective",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "2174",
+            "mAXelapsed": "1344.0",
+            "aVGelapsed": "17.81",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "623320",
+            "mAXelapsed": "654.0",
+            "aVGelapsed": "9.24",
+            "daoMethodName": "findByWebUserId",
+            "daoName": "WechatConfigMapper"
+          },
+          {
+            "cOUNT无": "8222",
+            "mAXelapsed": "292.0",
+            "aVGelapsed": "13.52",
+            "daoMethodName": "insertSelective",
+            "daoName": "WechatConfigMapper"
+          },
+          {
+            "cOUNT无": "335982",
+            "mAXelapsed": "5028.0",
+            "aVGelapsed": "9.54",
+            "daoMethodName": "statisticsTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "43149",
+            "mAXelapsed": "314.0",
+            "aVGelapsed": "11.04",
+            "daoMethodName": "queryTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "5808",
+            "mAXelapsed": "117.0",
+            "aVGelapsed": "9.2",
+            "daoMethodName": "selectByPrimaryKey",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "670",
+            "mAXelapsed": "58.0",
+            "aVGelapsed": "11.16",
+            "daoMethodName": "dealTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "294",
+            "mAXelapsed": "96.0",
+            "aVGelapsed": "17.1",
+            "daoMethodName": "insert",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "106085",
+            "mAXelapsed": "5010.0",
+            "aVGelapsed": "22.62",
+            "daoMethodName": "queryPayrollDetail",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "69354",
+            "mAXelapsed": "457.0",
+            "aVGelapsed": "9.66",
+            "daoMethodName": "getEmpIdList",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "54641",
+            "mAXelapsed": "19378.0",
+            "aVGelapsed": "267.45",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "25680",
+            "mAXelapsed": "5622.0",
+            "aVGelapsed": "67.2",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "11723",
+            "mAXelapsed": "148.0",
+            "aVGelapsed": "10.17",
+            "daoMethodName": "getEmpIdSetByExcelCacheIds",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "139126",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "9.88",
+            "daoMethodName": "queryPayrollRawByExcelCacheId",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "49693",
+            "mAXelapsed": "537.0",
+            "aVGelapsed": "16.07",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "25646",
+            "mAXelapsed": "234.0",
+            "aVGelapsed": "10.46",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "60538",
+            "mAXelapsed": "297.0",
+            "aVGelapsed": "6.02",
+            "daoMethodName": "selectByCompanyIdAndEmployeeIdList",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "55116",
+            "mAXelapsed": "341.0",
+            "aVGelapsed": "9.03",
+            "daoMethodName": "selectBeDimissionCount",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "25044",
+            "mAXelapsed": "202.0",
+            "aVGelapsed": "9.21",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "24072",
+            "mAXelapsed": "13791.0",
+            "aVGelapsed": "18.67",
+            "daoMethodName": "deleteDimission",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "21614",
+            "mAXelapsed": "211.0",
+            "aVGelapsed": "12.98",
+            "daoMethodName": "updateByEmployeeIdSelective",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "21278",
+            "mAXelapsed": "180.0",
+            "aVGelapsed": "11.18",
+            "daoMethodName": "listDimissionInfo",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "725",
+            "mAXelapsed": "127.0",
+            "aVGelapsed": "12.01",
+            "daoMethodName": "updateByPrimaryKey",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "60",
+            "mAXelapsed": "21.0",
+            "aVGelapsed": "12.15",
+            "daoMethodName": "selectDimissionExport",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "6",
+            "mAXelapsed": "13.0",
+            "aVGelapsed": "11.5",
+            "daoMethodName": "updateByCompanyIdAndEmployeeIdSelective",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "86754",
+            "mAXelapsed": "289.0",
+            "aVGelapsed": "9.15",
+            "daoMethodName": "deleteByCompanyIdAndEmployeeIdList",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "61191",
+            "mAXelapsed": "337.0",
+            "aVGelapsed": "5.71",
+            "daoMethodName": "getProbation",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "54834",
+            "mAXelapsed": "198.0",
+            "aVGelapsed": "8.83",
+            "daoMethodName": "selectBeEmployee",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "814",
+            "mAXelapsed": "45.0",
+            "aVGelapsed": "9.5",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "618",
+            "mAXelapsed": "57.0",
+            "aVGelapsed": "10.41",
+            "daoMethodName": "update",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "151951",
+            "mAXelapsed": "460.0",
+            "aVGelapsed": "9.55",
+            "daoMethodName": "queryWebUser",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "18644",
+            "mAXelapsed": "246.0",
+            "aVGelapsed": "11.15",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "11043",
+            "mAXelapsed": "199.0",
+            "aVGelapsed": "19.18",
+            "daoMethodName": "insertSelective",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "9787",
+            "mAXelapsed": "1063.0",
+            "aVGelapsed": "15.11",
+            "daoMethodName": "queryByIdList",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "88892",
+            "mAXelapsed": "5009.0",
+            "aVGelapsed": "9.84",
+            "daoMethodName": "queryComputeRule",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "20633",
+            "mAXelapsed": "5016.0",
+            "aVGelapsed": "17.45",
+            "daoMethodName": "insertIgnore",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "4544",
+            "mAXelapsed": "205.0",
+            "aVGelapsed": "16.83",
+            "daoMethodName": "updateByRuleId",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "105823",
+            "mAXelapsed": "5052.0",
+            "aVGelapsed": "9.28",
+            "daoMethodName": "selectByCompanyId",
+            "daoName": "RemindDaysMapper"
+          },
+          {
+            "cOUNT无": "4",
+            "mAXelapsed": "20.0",
+            "aVGelapsed": "17.0",
+            "daoMethodName": "insert",
+            "daoName": "RemindDaysMapper"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "77.0",
+            "aVGelapsed": "47.67",
+            "daoMethodName": "update",
+            "daoName": "RemindDaysMapper"
+          },
+          {
+            "cOUNT无": "82140",
+            "mAXelapsed": "406.0",
+            "aVGelapsed": "9.4",
+            "daoMethodName": "selectEmployeeEducationDetail",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "2132",
+            "mAXelapsed": "13414.0",
+            "aVGelapsed": "63.47",
+            "daoMethodName": "deleteEducationList",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "774",
+            "mAXelapsed": "65.0",
+            "aVGelapsed": "10.78",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "211",
+            "mAXelapsed": "29.0",
+            "aVGelapsed": "9.91",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "82140",
+            "mAXelapsed": "209.0",
+            "aVGelapsed": "8.94",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "2132",
+            "mAXelapsed": "13369.0",
+            "aVGelapsed": "61.52",
+            "daoMethodName": "deleteByEmployeeId",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "509",
+            "mAXelapsed": "146.0",
+            "aVGelapsed": "14.09",
+            "daoMethodName": "update",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "167",
+            "mAXelapsed": "21.0",
+            "aVGelapsed": "9.59",
+            "daoMethodName": "insertSelective",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "6",
+            "mAXelapsed": "21.0",
+            "aVGelapsed": "12.17",
+            "daoMethodName": "deleteByMemberIds",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "82140",
+            "mAXelapsed": "199.0",
+            "aVGelapsed": "9.0",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeWorkExperienceMapper"
+          },
+          {
+            "cOUNT无": "2132",
+            "mAXelapsed": "13517.0",
+            "aVGelapsed": "61.44",
+            "daoMethodName": "deleteByEmployeeId",
+            "daoName": "EmployeeWorkExperienceMapper"
+          },
+          {
+            "cOUNT无": "356",
+            "mAXelapsed": "84.0",
+            "aVGelapsed": "13.3",
+            "daoMethodName": "update",
+            "daoName": "EmployeeWorkExperienceMapper"
+          }
+        ]
+      },
+      "服务异常统计": {
+        "heads": [
+          "serviceAppName",
+          "serviceName",
+          "serviceMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "serviceMethodName": "方法名",
+          "serviceAppName": "应用名",
+          "serviceName": "接口名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "758",
+            "mAXelapsed": "50295.0",
+            "aVGelapsed": "13017.77",
+            "serviceMethodName": "queryEmployeeTaxBillDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "22",
+            "mAXelapsed": "4020.0",
+            "aVGelapsed": "868.68",
+            "serviceMethodName": "saveDeclarationInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5009.0",
+            "aVGelapsed": "5009.0",
+            "serviceMethodName": "queryComputeRule",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "41",
+            "mAXelapsed": "9908.0",
+            "aVGelapsed": "420.02",
+            "serviceMethodName": "savePayrollRaw",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "20",
+            "mAXelapsed": "44.0",
+            "aVGelapsed": "31.9",
+            "serviceMethodName": "updateEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "0.0",
+            "aVGelapsed": "0.0",
+            "serviceMethodName": "addEmployeeList",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5057.0",
+            "aVGelapsed": "5057.0",
+            "serviceMethodName": "getRemindDaysByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5040.0",
+            "aVGelapsed": "5040.0",
+            "serviceMethodName": "updateEmployeeList",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "13",
+            "mAXelapsed": "9987.0",
+            "aVGelapsed": "6813.08",
+            "serviceMethodName": "queryEmployeePayrollList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5078.0",
+            "aVGelapsed": "5078.0",
+            "serviceMethodName": "queryEmployeePayrollDetailList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5020.0",
+            "aVGelapsed": "5020.0",
+            "serviceMethodName": "updatePayrollOrDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "10",
+            "mAXelapsed": "16.0",
+            "aVGelapsed": "10.4",
+            "serviceMethodName": "getPreferPayrollName",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5010.0",
+            "aVGelapsed": "5010.0",
+            "serviceMethodName": "getPayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5020.0",
+            "aVGelapsed": "5020.0",
+            "serviceMethodName": "queryPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "5",
+            "mAXelapsed": "5326.0",
+            "aVGelapsed": "5084.6",
+            "serviceMethodName": "queryPageByCondition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "5045.0",
+            "aVGelapsed": "5024.67",
+            "serviceMethodName": "statistic",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "5012.0",
+            "aVGelapsed": "5011.5",
+            "serviceMethodName": "countUnsyncEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "5011.0",
+            "serviceMethodName": "queryAllEmployeeByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "8",
+            "mAXelapsed": "5028.0",
+            "aVGelapsed": "5016.13",
+            "serviceMethodName": "statisticsTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "5010.67",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "5019.0",
+            "aVGelapsed": "5017.5",
+            "serviceMethodName": "queryPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "5014.0",
+            "aVGelapsed": "5011.33",
+            "serviceMethodName": "getByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "13.0",
+            "aVGelapsed": "7.5",
+            "serviceMethodName": "getEmployees",
+            "serviceAppName": "gaia",
+            "serviceName": "GaiaEmployeeApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5026.0",
+            "aVGelapsed": "5026.0",
+            "serviceMethodName": "addEmployeeDimission",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDimissionApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "5017.0",
+            "aVGelapsed": "5017.0",
+            "serviceMethodName": "deleteSnapshoot",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootApi"
+          }
+        ]
+      },
+      "服务统计报表": {
+        "heads": [
+          "serviceAppName",
+          "serviceName",
+          "serviceMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "serviceMethodName": "方法名",
+          "serviceAppName": "应用名",
+          "serviceName": "接口名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "2224758",
+            "mAXelapsed": "1470.0",
+            "aVGelapsed": "5.23",
+            "serviceMethodName": "queryRelationList",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "1263981",
+            "mAXelapsed": "1217.0",
+            "aVGelapsed": "2.16",
+            "serviceMethodName": "queryWebUserById",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "1124960",
+            "mAXelapsed": "1523.0",
+            "aVGelapsed": "5.09",
+            "serviceMethodName": "queryWebUserByOpenId",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "1109775",
+            "mAXelapsed": "1056.0",
+            "aVGelapsed": "1.99",
+            "serviceMethodName": "isWechatPass",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "1103751",
+            "mAXelapsed": "1441.0",
+            "aVGelapsed": "8.18",
+            "serviceMethodName": "queryUserConfig",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "14320",
+            "mAXelapsed": "1858.0",
+            "aVGelapsed": "33.85",
+            "serviceMethodName": "queryEmployeeWechatMap",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "967",
+            "mAXelapsed": "370.0",
+            "aVGelapsed": "8.35",
+            "serviceMethodName": "queryWebUserByMobile",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "1026742",
+            "mAXelapsed": "9987.0",
+            "aVGelapsed": "24.49",
+            "serviceMethodName": "queryEmployeePayrollList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "226695",
+            "mAXelapsed": "9833.0",
+            "aVGelapsed": "23.12",
+            "serviceMethodName": "queryEmployeePayrollDetailList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "173095",
+            "mAXelapsed": "5840.0",
+            "aVGelapsed": "28.18",
+            "serviceMethodName": "updatePayrollOrDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "10635",
+            "mAXelapsed": "3410.0",
+            "aVGelapsed": "89.05",
+            "serviceMethodName": "savePayroll",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "10542",
+            "mAXelapsed": "782.0",
+            "aVGelapsed": "17.18",
+            "serviceMethodName": "savePayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "9013",
+            "mAXelapsed": "2962.0",
+            "aVGelapsed": "64.34",
+            "serviceMethodName": "queryPayrollAndDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "3224",
+            "mAXelapsed": "3106.0",
+            "aVGelapsed": "225.58",
+            "serviceMethodName": "deletePayroll",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "449",
+            "mAXelapsed": "9614.0",
+            "aVGelapsed": "368.99",
+            "serviceMethodName": "repealPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "102",
+            "mAXelapsed": "39.0",
+            "aVGelapsed": "22.1",
+            "serviceMethodName": "queryPayrollByDetailId",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "240684",
+            "mAXelapsed": "9137.0",
+            "aVGelapsed": "44.81",
+            "serviceMethodName": "statistic",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "229433",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "145.22",
+            "serviceMethodName": "queryAllEmployeeByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "167479",
+            "mAXelapsed": "5326.0",
+            "aVGelapsed": "29.97",
+            "serviceMethodName": "queryPageByCondition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "166373",
+            "mAXelapsed": "7565.0",
+            "aVGelapsed": "28.87",
+            "serviceMethodName": "countUnsyncEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "82169",
+            "mAXelapsed": "1063.0",
+            "aVGelapsed": "44.61",
+            "serviceMethodName": "queryEmployeeByEmployeeId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "54923",
+            "mAXelapsed": "544.0",
+            "aVGelapsed": "9.6",
+            "serviceMethodName": "queryAllEmployeeByEmployeeIds",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "15106",
+            "mAXelapsed": "3692.0",
+            "aVGelapsed": "33.83",
+            "serviceMethodName": "queryDeductEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "10468",
+            "mAXelapsed": "4848.0",
+            "aVGelapsed": "23.87",
+            "serviceMethodName": "getByCompanyIdWithoutDimission",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "6607",
+            "mAXelapsed": "789.0",
+            "aVGelapsed": "13.54",
+            "serviceMethodName": "queryToSyncEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "3426",
+            "mAXelapsed": "2010.0",
+            "aVGelapsed": "16.36",
+            "serviceMethodName": "queryEmployeeByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "1120",
+            "mAXelapsed": "563.0",
+            "aVGelapsed": "24.73",
+            "serviceMethodName": "contractStat",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "631904",
+            "mAXelapsed": "50295.0",
+            "aVGelapsed": "88.37",
+            "serviceMethodName": "queryEmployeeTaxBillDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "63214",
+            "mAXelapsed": "5009.0",
+            "aVGelapsed": "9.98",
+            "serviceMethodName": "queryComputeRule",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "39714",
+            "mAXelapsed": "40064.0",
+            "aVGelapsed": "38.26",
+            "serviceMethodName": "queryEmployeeTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "13636",
+            "mAXelapsed": "1060.0",
+            "aVGelapsed": "29.26",
+            "serviceMethodName": "statisticalEmployeeTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "10428",
+            "mAXelapsed": "8286.0",
+            "aVGelapsed": "96.06",
+            "serviceMethodName": "saveDeclarationInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "10423",
+            "mAXelapsed": "1342.0",
+            "aVGelapsed": "35.39",
+            "serviceMethodName": "getTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "7327",
+            "mAXelapsed": "592.0",
+            "aVGelapsed": "28.08",
+            "serviceMethodName": "saveComputeRule",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "1009",
+            "mAXelapsed": "384.0",
+            "aVGelapsed": "40.97",
+            "serviceMethodName": "statisticPushTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "424",
+            "mAXelapsed": "210.0",
+            "aVGelapsed": "39.6",
+            "serviceMethodName": "queryPushTaxDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "336145",
+            "mAXelapsed": "5028.0",
+            "aVGelapsed": "10.15",
+            "serviceMethodName": "statisticsTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "43161",
+            "mAXelapsed": "505.0",
+            "aVGelapsed": "11.64",
+            "serviceMethodName": "queryTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "5135",
+            "mAXelapsed": "442.0",
+            "aVGelapsed": "10.11",
+            "serviceMethodName": "getTodolistItem",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "682",
+            "mAXelapsed": "175.0",
+            "aVGelapsed": "46.62",
+            "serviceMethodName": "dealTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "99",
+            "mAXelapsed": "583.0",
+            "aVGelapsed": "103.02",
+            "serviceMethodName": "createTodolistItemByMaintainNotice",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "338544",
+            "mAXelapsed": "760.0",
+            "aVGelapsed": "2.34",
+            "serviceMethodName": "queryClientServiceList",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "10385",
+            "mAXelapsed": "855.0",
+            "aVGelapsed": "2.47",
+            "serviceMethodName": "queryBusinessServiceList",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "220",
+            "mAXelapsed": "39.0",
+            "aVGelapsed": "4.51",
+            "serviceMethodName": "queryOrderCount",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "68",
+            "mAXelapsed": "82.0",
+            "aVGelapsed": "30.99",
+            "serviceMethodName": "orderSelfService",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "145286",
+            "mAXelapsed": "5020.0",
+            "aVGelapsed": "13.5",
+            "serviceMethodName": "queryPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "47062",
+            "mAXelapsed": "733.0",
+            "aVGelapsed": "22.63",
+            "serviceMethodName": "queryPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "40990",
+            "mAXelapsed": "707.0",
+            "aVGelapsed": "10.15",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "25713",
+            "mAXelapsed": "5010.0",
+            "aVGelapsed": "11.33",
+            "serviceMethodName": "getPayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "20701",
+            "mAXelapsed": "986.0",
+            "aVGelapsed": "11.17",
+            "serviceMethodName": "getPreferPayrollName",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "13413",
+            "mAXelapsed": "1186.0",
+            "aVGelapsed": "11.34",
+            "serviceMethodName": "getPayrollStatistics",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "13376",
+            "mAXelapsed": "488.0",
+            "aVGelapsed": "10.93",
+            "serviceMethodName": "getEmpIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "12422",
+            "mAXelapsed": "413.0",
+            "aVGelapsed": "10.26",
+            "serviceMethodName": "queryHasPayrollMonth",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "10726",
+            "mAXelapsed": "1427.0",
+            "aVGelapsed": "44.73",
+            "serviceMethodName": "queryPayrollDetailByPayrollIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "3266",
+            "mAXelapsed": "482.0",
+            "aVGelapsed": "11.38",
+            "serviceMethodName": "getTaxMonthRange",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "645",
+            "mAXelapsed": "285.0",
+            "aVGelapsed": "19.17",
+            "serviceMethodName": "removePayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "121401",
+            "mAXelapsed": "5011.0",
+            "aVGelapsed": "10.35",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "106119",
+            "mAXelapsed": "5019.0",
+            "aVGelapsed": "24.57",
+            "serviceMethodName": "queryPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "69359",
+            "mAXelapsed": "560.0",
+            "aVGelapsed": "10.04",
+            "serviceMethodName": "getEmpIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "17657",
+            "mAXelapsed": "38953.0",
+            "aVGelapsed": "62.97",
+            "serviceMethodName": "getPayrollInfoRepeat",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "11722",
+            "mAXelapsed": "536.0",
+            "aVGelapsed": "10.73",
+            "serviceMethodName": "getEmpIdSetByExcelCacheIds",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "193252",
+            "mAXelapsed": "480.0",
+            "aVGelapsed": "0.94",
+            "serviceMethodName": "queryBusinessParameterValue",
+            "serviceAppName": "gaia",
+            "serviceName": "BusinessParameterApi"
+          },
+          {
+            "cOUNT无": "42713",
+            "mAXelapsed": "445.0",
+            "aVGelapsed": "3.91",
+            "serviceMethodName": "queryBusinessParameter",
+            "serviceAppName": "gaia",
+            "serviceName": "BusinessParameterApi"
+          },
+          {
+            "cOUNT无": "131510",
+            "mAXelapsed": "925.0",
+            "aVGelapsed": "2.15",
+            "serviceMethodName": "saveWechatPassValidation",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "11698",
+            "mAXelapsed": "580.0",
+            "aVGelapsed": "51.87",
+            "serviceMethodName": "wechatBind",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "10866",
+            "mAXelapsed": "1878.0",
+            "aVGelapsed": "46.36",
+            "serviceMethodName": "addCompanyRelation",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "8947",
+            "mAXelapsed": "610.0",
+            "aVGelapsed": "30.23",
+            "serviceMethodName": "updateSubscribeStatus",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "8227",
+            "mAXelapsed": "495.0",
+            "aVGelapsed": "25.94",
+            "serviceMethodName": "saveUserConfig",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "7270",
+            "mAXelapsed": "726.0",
+            "aVGelapsed": "25.35",
+            "serviceMethodName": "chooseDefaultCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "1741",
+            "mAXelapsed": "381.0",
+            "aVGelapsed": "27.15",
+            "serviceMethodName": "setWechatPassword",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "743",
+            "mAXelapsed": "262.0",
+            "aVGelapsed": "30.55",
+            "serviceMethodName": "wechatUnBind",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "534",
+            "mAXelapsed": "159.0",
+            "aVGelapsed": "24.56",
+            "serviceMethodName": "h5LoginIncludeRegister",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "289",
+            "mAXelapsed": "405.0",
+            "aVGelapsed": "27.16",
+            "serviceMethodName": "setH5Password",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "280",
+            "mAXelapsed": "422.0",
+            "aVGelapsed": "53.75",
+            "serviceMethodName": "removeCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "10",
+            "mAXelapsed": "108.0",
+            "aVGelapsed": "38.9",
+            "serviceMethodName": "certificateCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "164072",
+            "mAXelapsed": "1165.0",
+            "aVGelapsed": "2.31",
+            "serviceMethodName": "getFunctionLimitByLocationCode",
+            "serviceAppName": "gaia",
+            "serviceName": "FunctionLimitApi"
+          },
+          {
+            "cOUNT无": "52069",
+            "mAXelapsed": "5057.0",
+            "aVGelapsed": "13.11",
+            "serviceMethodName": "getRemindDaysByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "48168",
+            "mAXelapsed": "2690.0",
+            "aVGelapsed": "96.05",
+            "serviceMethodName": "updateEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "7062",
+            "mAXelapsed": "57440.0",
+            "aVGelapsed": "300.8",
+            "serviceMethodName": "updateEmployeeList",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "6222",
+            "mAXelapsed": "529.0",
+            "aVGelapsed": "49.01",
+            "serviceMethodName": "addEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "3357",
+            "mAXelapsed": "26531.0",
+            "aVGelapsed": "350.2",
+            "serviceMethodName": "markSyncEmployees",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "3274",
+            "mAXelapsed": "12136.0",
+            "aVGelapsed": "96.14",
+            "serviceMethodName": "addEmployeeList",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "2481",
+            "mAXelapsed": "516.0",
+            "aVGelapsed": "53.49",
+            "serviceMethodName": "deleteEmployees",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "279",
+            "mAXelapsed": "20503.0",
+            "aVGelapsed": "677.56",
+            "serviceMethodName": "deleteAllEmployees",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "7",
+            "mAXelapsed": "91.0",
+            "aVGelapsed": "43.57",
+            "serviceMethodName": "upsertRemindDays",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "36181",
+            "mAXelapsed": "19634.0",
+            "aVGelapsed": "276.16",
+            "serviceMethodName": "updatePayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "35603",
+            "mAXelapsed": "682.0",
+            "aVGelapsed": "19.95",
+            "serviceMethodName": "updatePayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "25684",
+            "mAXelapsed": "9908.0",
+            "aVGelapsed": "111.01",
+            "serviceMethodName": "savePayrollRaw",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "18474",
+            "mAXelapsed": "15080.0",
+            "aVGelapsed": "303.67",
+            "serviceMethodName": "matchPayrollRawEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "109223",
+            "mAXelapsed": "5014.0",
+            "aVGelapsed": "9.41",
+            "serviceMethodName": "getByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "346",
+            "mAXelapsed": "327.0",
+            "aVGelapsed": "25.4",
+            "serviceMethodName": "addDepartment",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "155",
+            "mAXelapsed": "19.0",
+            "aVGelapsed": "3.52",
+            "serviceMethodName": "getSubDepartments",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "45",
+            "mAXelapsed": "37.0",
+            "aVGelapsed": "24.22",
+            "serviceMethodName": "updateDepartment",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "31",
+            "mAXelapsed": "190.0",
+            "aVGelapsed": "61.84",
+            "serviceMethodName": "deleteDepartment",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "108619",
+            "mAXelapsed": "1256.0",
+            "aVGelapsed": "7.78",
+            "serviceMethodName": "selectByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "398",
+            "mAXelapsed": "271.0",
+            "aVGelapsed": "43.98",
+            "serviceMethodName": "addPosition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "17",
+            "mAXelapsed": "145.0",
+            "aVGelapsed": "34.94",
+            "serviceMethodName": "deletePosition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "7",
+            "mAXelapsed": "68.0",
+            "aVGelapsed": "46.86",
+            "serviceMethodName": "updatePosition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "31193",
+            "mAXelapsed": "1146.0",
+            "aVGelapsed": "70.2",
+            "serviceMethodName": "queryHaveAdditionalSnapshootEmployeeIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          },
+          {
+            "cOUNT无": "23611",
+            "mAXelapsed": "554.0",
+            "aVGelapsed": "11.28",
+            "serviceMethodName": "queryHaveAccumulativeEmployeeIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          }
+        ]
+      }
+    }
+  },
+  "last": {
+    "head": {
+      "code": "00000000",
+      "description": "成功",
+      "msg": "成功",
+      "time": "2019-07-05 16:20:36",
+      "status": "Y"
+    },
+    "body": {
+      "数据访问层异常统计": {
+        "heads": [
+          "daoName",
+          "daoMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "daoMethodName": "方法名",
+          "daoName": "类名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "1009",
+            "mAXelapsed": "806665.0",
+            "aVGelapsed": "119623.45",
+            "daoMethodName": "findByWebUserId",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "308",
+            "mAXelapsed": "120468.0",
+            "aVGelapsed": "118631.29",
+            "daoMethodName": "queryWebUser",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "18.0",
+            "aVGelapsed": "18.0",
+            "daoMethodName": "insertSelective",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "15.0",
+            "aVGelapsed": "15.0",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "208",
+            "mAXelapsed": "805639.0",
+            "aVGelapsed": "123058.4",
+            "daoMethodName": "queryPayrollDetailByEmployeeId",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "18",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "73367.94",
+            "daoMethodName": "queryDetailByEmployeeIdAndMonthInterval",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "13.0",
+            "aVGelapsed": "13.0",
+            "daoMethodName": "updatePayrollDetail",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "145",
+            "mAXelapsed": "805640.0",
+            "aVGelapsed": "122128.79",
+            "daoMethodName": "statisticsTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120007.0",
+            "aVGelapsed": "120007.0",
+            "daoMethodName": "selectByPrimaryKey",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "38",
+            "mAXelapsed": "3722.0",
+            "aVGelapsed": "563.66",
+            "daoMethodName": "insert",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "18",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "107840.89",
+            "daoMethodName": "queryEmployeesTaxBill",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "33",
+            "mAXelapsed": "144.0",
+            "aVGelapsed": "41.12",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "daoMethodName": "queryPayrollDetail",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "34",
+            "mAXelapsed": "120005.0",
+            "aVGelapsed": "110825.24",
+            "daoMethodName": "insert",
+            "daoName": "BonusPersonalMapper"
+          },
+          {
+            "cOUNT无": "31",
+            "mAXelapsed": "805639.0",
+            "aVGelapsed": "142118.9",
+            "daoMethodName": "findByWebUserId",
+            "daoName": "WechatConfigMapper"
+          },
+          {
+            "cOUNT无": "12",
+            "mAXelapsed": "805643.0",
+            "aVGelapsed": "153195.5",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "daoMethodName": "selectAllByCompanyId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "daoMethodName": "selectByCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120004.0",
+            "aVGelapsed": "100189.5",
+            "daoMethodName": "selectByOtherCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "80.0",
+            "aVGelapsed": "80.0",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "9",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "120002.78",
+            "daoMethodName": "queryPayrollByPayrollIdList",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "4",
+            "mAXelapsed": "120006.0",
+            "aVGelapsed": "120003.0",
+            "daoMethodName": "queryPayrollByCondition",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "4",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "120001.25",
+            "daoMethodName": "queryPayrollByMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "120002.0",
+            "daoMethodName": "queryHasPayrollMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "daoMethodName": "queryPayrollByPayrollId",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "9",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "120002.22",
+            "daoMethodName": "queryPayrollRawByExcelCacheId",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "6",
+            "mAXelapsed": "15.0",
+            "aVGelapsed": "13.67",
+            "daoMethodName": "insert",
+            "daoName": "DeductionLoanMapper"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "80009.67",
+            "daoMethodName": "insert",
+            "daoName": "DeductionSerialMapper"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "120001.33",
+            "daoMethodName": "selectByCompanyId",
+            "daoName": "RemindDaysMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "60007.0",
+            "daoMethodName": "selectByCompanyId",
+            "daoName": "EmployeeDepartmentMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "805640.0",
+            "aVGelapsed": "805640.0",
+            "daoMethodName": "listDimissionInfo",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "daoMethodName": "getPayrollRule",
+            "daoName": "PayrollRuleMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "120003.0",
+            "daoMethodName": "queryPersonalIncomeTaxByDeclareIdList",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "120002.0",
+            "daoMethodName": "insertIgnore",
+            "daoName": "StiSalaryRulesMapper"
+          }
+        ]
+      },
+      "数据访问层统计": {
+        "heads": [
+          "daoName",
+          "daoMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "daoMethodName": "方法名",
+          "daoName": "类名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "681277",
+            "mAXelapsed": "805639.0",
+            "aVGelapsed": "53.55",
+            "daoMethodName": "queryPayrollDetailByEmployeeId",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "187958",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "22.79",
+            "daoMethodName": "queryDetailByEmployeeIdAndMonthInterval",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "113665",
+            "mAXelapsed": "9682.0",
+            "aVGelapsed": "15.2",
+            "daoMethodName": "updatePayrollDetail",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "28252",
+            "mAXelapsed": "886.0",
+            "aVGelapsed": "20.35",
+            "daoMethodName": "queryPayrollDetail",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "9438",
+            "mAXelapsed": "389.0",
+            "aVGelapsed": "9.83",
+            "daoMethodName": "statistics",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "9355",
+            "mAXelapsed": "244.0",
+            "aVGelapsed": "9.44",
+            "daoMethodName": "getEmpIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "7940",
+            "mAXelapsed": "13688.0",
+            "aVGelapsed": "51.39",
+            "daoMethodName": "getRepeatPayrollEmployee",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "6407",
+            "mAXelapsed": "1556.0",
+            "aVGelapsed": "27.47",
+            "daoMethodName": "queryPayrollDetailByPage",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "5554",
+            "mAXelapsed": "2227.0",
+            "aVGelapsed": "58.43",
+            "daoMethodName": "insert",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "3253",
+            "mAXelapsed": "887.0",
+            "aVGelapsed": "47.87",
+            "daoMethodName": "queryPayrollDetailByPayrollIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1506",
+            "mAXelapsed": "337.0",
+            "aVGelapsed": "17.51",
+            "daoMethodName": "updateByPayrollIdUnvalid",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1391",
+            "mAXelapsed": "619.0",
+            "aVGelapsed": "20.98",
+            "daoMethodName": "checkPayrollDelete",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "1362",
+            "mAXelapsed": "303.0",
+            "aVGelapsed": "29.06",
+            "daoMethodName": "getInvidualPayrollEmployeeIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "386",
+            "mAXelapsed": "77.0",
+            "aVGelapsed": "7.47",
+            "daoMethodName": "getSalaryEmpIdList",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "110",
+            "mAXelapsed": "127.0",
+            "aVGelapsed": "12.2",
+            "daoMethodName": "queryPayrollDetailByPayrollDetailId",
+            "daoName": "PayrollDetailMapper"
+          },
+          {
+            "cOUNT无": "850048",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "11.87",
+            "daoMethodName": "queryPayrollByPayrollIdList",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "66616",
+            "mAXelapsed": "120006.0",
+            "aVGelapsed": "22.35",
+            "daoMethodName": "queryPayrollByCondition",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "34604",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "11.88",
+            "daoMethodName": "queryPayrollByPayrollId",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "11762",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "51.78",
+            "daoMethodName": "queryPayrollByMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "8437",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "23.59",
+            "daoMethodName": "queryHasPayrollMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "5552",
+            "mAXelapsed": "199.0",
+            "aVGelapsed": "11.88",
+            "daoMethodName": "saveOrUpdate",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "2892",
+            "mAXelapsed": "341.0",
+            "aVGelapsed": "11.45",
+            "daoMethodName": "updatePayroll",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "1506",
+            "mAXelapsed": "158.0",
+            "aVGelapsed": "10.57",
+            "daoMethodName": "updatePayrollUnvalid",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "1425",
+            "mAXelapsed": "20.0",
+            "aVGelapsed": "6.68",
+            "daoMethodName": "queryMaxPayrollByMonth",
+            "daoName": "PayrollMapper"
+          },
+          {
+            "cOUNT无": "323731",
+            "mAXelapsed": "806665.0",
+            "aVGelapsed": "417.23",
+            "daoMethodName": "findByWebUserId",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "7747",
+            "mAXelapsed": "248.0",
+            "aVGelapsed": "19.5",
+            "daoMethodName": "insertSelective",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "6125",
+            "mAXelapsed": "307.0",
+            "aVGelapsed": "12.7",
+            "daoMethodName": "queryRelationByEmployee",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "936",
+            "mAXelapsed": "204.0",
+            "aVGelapsed": "17.27",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "WebMobileRelationMapper"
+          },
+          {
+            "cOUNT无": "317730",
+            "mAXelapsed": "805639.0",
+            "aVGelapsed": "34.49",
+            "daoMethodName": "findByWebUserId",
+            "daoName": "WechatConfigMapper"
+          },
+          {
+            "cOUNT无": "7482",
+            "mAXelapsed": "213.0",
+            "aVGelapsed": "13.2",
+            "daoMethodName": "insertSelective",
+            "daoName": "WechatConfigMapper"
+          },
+          {
+            "cOUNT无": "261707",
+            "mAXelapsed": "805640.0",
+            "aVGelapsed": "82.65",
+            "daoMethodName": "statisticsTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "30035",
+            "mAXelapsed": "360.0",
+            "aVGelapsed": "10.52",
+            "daoMethodName": "queryTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "2174",
+            "mAXelapsed": "120007.0",
+            "aVGelapsed": "64.44",
+            "daoMethodName": "selectByPrimaryKey",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "203",
+            "mAXelapsed": "29.0",
+            "aVGelapsed": "10.89",
+            "daoMethodName": "dealTodolist",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "109",
+            "mAXelapsed": "41.0",
+            "aVGelapsed": "15.84",
+            "daoMethodName": "insert",
+            "daoName": "TodolistItemMapper"
+          },
+          {
+            "cOUNT无": "90945",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "36.44",
+            "daoMethodName": "selectByCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "57312",
+            "mAXelapsed": "805643.0",
+            "aVGelapsed": "44.74",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "55750",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "54.67",
+            "daoMethodName": "selectAllByCompanyId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "20402",
+            "mAXelapsed": "23885.0",
+            "aVGelapsed": "44.21",
+            "daoMethodName": "update",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "10724",
+            "mAXelapsed": "3581.0",
+            "aVGelapsed": "35.92",
+            "daoMethodName": "selectByEmployeeIds",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "6792",
+            "mAXelapsed": "120004.0",
+            "aVGelapsed": "51.74",
+            "daoMethodName": "selectByOtherCondition",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "4304",
+            "mAXelapsed": "6293.0",
+            "aVGelapsed": "26.61",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "778",
+            "mAXelapsed": "6960.0",
+            "aVGelapsed": "86.87",
+            "daoMethodName": "deleteByEmployeeId",
+            "daoName": "EmployeeMapper"
+          },
+          {
+            "cOUNT无": "147802",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "31.66",
+            "daoMethodName": "queryEmployeesTaxBill",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "15710",
+            "mAXelapsed": "243.0",
+            "aVGelapsed": "16.52",
+            "daoMethodName": "updateTaxDetailSawState",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "539",
+            "mAXelapsed": "3831.0",
+            "aVGelapsed": "137.92",
+            "daoMethodName": "insert",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "526",
+            "mAXelapsed": "1092.0",
+            "aVGelapsed": "32.39",
+            "daoMethodName": "queryPersonalIncomeTaxDetailList",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "394",
+            "mAXelapsed": "123.0",
+            "aVGelapsed": "12.89",
+            "daoMethodName": "queryPushDetailCollection",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "120",
+            "mAXelapsed": "167.0",
+            "aVGelapsed": "23.27",
+            "daoMethodName": "queryGroupByIdentification",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "117",
+            "mAXelapsed": "30.0",
+            "aVGelapsed": "19.15",
+            "daoMethodName": "updateEmployeeId",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "72",
+            "mAXelapsed": "48.0",
+            "aVGelapsed": "14.38",
+            "daoMethodName": "deleteTaxDetailByDeclareId",
+            "daoName": "PersonalIncomeTaxDetailMapper"
+          },
+          {
+            "cOUNT无": "116887",
+            "mAXelapsed": "120468.0",
+            "aVGelapsed": "353.97",
+            "daoMethodName": "queryWebUser",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "15263",
+            "mAXelapsed": "413.0",
+            "aVGelapsed": "10.91",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "7857",
+            "mAXelapsed": "233.0",
+            "aVGelapsed": "18.91",
+            "daoMethodName": "insertSelective",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "2887",
+            "mAXelapsed": "373.0",
+            "aVGelapsed": "15.66",
+            "daoMethodName": "queryByIdList",
+            "daoName": "WebUserMapper"
+          },
+          {
+            "cOUNT无": "51294",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "27.08",
+            "daoMethodName": "queryPayrollDetail",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "36153",
+            "mAXelapsed": "437.0",
+            "aVGelapsed": "9.1",
+            "daoMethodName": "getEmpIdList",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "26731",
+            "mAXelapsed": "49666.0",
+            "aVGelapsed": "312.47",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "12570",
+            "mAXelapsed": "3770.0",
+            "aVGelapsed": "64.2",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "7047",
+            "mAXelapsed": "129.0",
+            "aVGelapsed": "9.73",
+            "daoMethodName": "getEmpIdSetByExcelCacheIds",
+            "daoName": "PayrollRawDetailMapper"
+          },
+          {
+            "cOUNT无": "130877",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "10.19",
+            "daoMethodName": "queryPersonalIncomeTaxByDeclareIdList",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "1065",
+            "mAXelapsed": "206.0",
+            "aVGelapsed": "8.36",
+            "daoMethodName": "queryPersonalIncomeTaxByMonth",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "467",
+            "mAXelapsed": "198.0",
+            "aVGelapsed": "11.08",
+            "daoMethodName": "insert",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "302",
+            "mAXelapsed": "104.0",
+            "aVGelapsed": "14.41",
+            "daoMethodName": "queryPersonalIncomeTaxPage",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "72",
+            "mAXelapsed": "31.0",
+            "aVGelapsed": "11.54",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "PersonalIncomeTaxMapper"
+          },
+          {
+            "cOUNT无": "66725",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "25.42",
+            "daoMethodName": "queryPayrollRawByExcelCacheId",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "24084",
+            "mAXelapsed": "318.0",
+            "aVGelapsed": "15.95",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "12537",
+            "mAXelapsed": "217.0",
+            "aVGelapsed": "10.18",
+            "daoMethodName": "insert",
+            "daoName": "PayrollRawMapper"
+          },
+          {
+            "cOUNT无": "44895",
+            "mAXelapsed": "438.0",
+            "aVGelapsed": "9.4",
+            "daoMethodName": "queryComputeRule",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "9447",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "29.74",
+            "daoMethodName": "insertIgnore",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "1955",
+            "mAXelapsed": "50.0",
+            "aVGelapsed": "16.19",
+            "daoMethodName": "updateByRuleId",
+            "daoName": "StiSalaryRulesMapper"
+          },
+          {
+            "cOUNT无": "20282",
+            "mAXelapsed": "191.0",
+            "aVGelapsed": "8.6",
+            "daoMethodName": "selectBeEmployee",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "15598",
+            "mAXelapsed": "152.0",
+            "aVGelapsed": "9.13",
+            "daoMethodName": "deleteByCompanyIdAndEmployeeIdList",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "13258",
+            "mAXelapsed": "153.0",
+            "aVGelapsed": "5.88",
+            "daoMethodName": "getProbation",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "253",
+            "mAXelapsed": "35.0",
+            "aVGelapsed": "9.4",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "226",
+            "mAXelapsed": "31.0",
+            "aVGelapsed": "10.35",
+            "daoMethodName": "update",
+            "daoName": "EmployeeProbationMapper"
+          },
+          {
+            "cOUNT无": "20316",
+            "mAXelapsed": "150.0",
+            "aVGelapsed": "8.86",
+            "daoMethodName": "selectBeDimissionCount",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "11937",
+            "mAXelapsed": "216.0",
+            "aVGelapsed": "6.28",
+            "daoMethodName": "selectByCompanyIdAndEmployeeIdList",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "8628",
+            "mAXelapsed": "805640.0",
+            "aVGelapsed": "104.13",
+            "daoMethodName": "listDimissionInfo",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "1940",
+            "mAXelapsed": "205.0",
+            "aVGelapsed": "9.24",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "1671",
+            "mAXelapsed": "7601.0",
+            "aVGelapsed": "42.14",
+            "daoMethodName": "deleteDimission",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "824",
+            "mAXelapsed": "92.0",
+            "aVGelapsed": "9.28",
+            "daoMethodName": "updateByEmployeeIdSelective",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "200",
+            "mAXelapsed": "44.0",
+            "aVGelapsed": "10.19",
+            "daoMethodName": "updateByPrimaryKey",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "43",
+            "mAXelapsed": "30.0",
+            "aVGelapsed": "13.16",
+            "daoMethodName": "selectDimissionExport",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "33.0",
+            "aVGelapsed": "22.0",
+            "daoMethodName": "updateByCompanyIdAndEmployeeIdSelective",
+            "daoName": "EmployeeDimissionMapper"
+          },
+          {
+            "cOUNT无": "43414",
+            "mAXelapsed": "479.0",
+            "aVGelapsed": "9.17",
+            "daoMethodName": "selectEmployeeEducationDetail",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "742",
+            "mAXelapsed": "7539.0",
+            "aVGelapsed": "83.11",
+            "daoMethodName": "deleteEducationList",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "416",
+            "mAXelapsed": "93.0",
+            "aVGelapsed": "10.71",
+            "daoMethodName": "updateByPrimaryKeySelective",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "90",
+            "mAXelapsed": "29.0",
+            "aVGelapsed": "9.83",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeEducationExperienceMapper"
+          },
+          {
+            "cOUNT无": "43414",
+            "mAXelapsed": "184.0",
+            "aVGelapsed": "8.64",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "742",
+            "mAXelapsed": "7492.0",
+            "aVGelapsed": "81.01",
+            "daoMethodName": "deleteByEmployeeId",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "227",
+            "mAXelapsed": "33.0",
+            "aVGelapsed": "11.46",
+            "daoMethodName": "update",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "71",
+            "mAXelapsed": "20.0",
+            "aVGelapsed": "9.87",
+            "daoMethodName": "insertSelective",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "9.0",
+            "aVGelapsed": "8.5",
+            "daoMethodName": "deleteByMemberIds",
+            "daoName": "EmployeeFamilyMemberMapper"
+          },
+          {
+            "cOUNT无": "43414",
+            "mAXelapsed": "189.0",
+            "aVGelapsed": "8.71",
+            "daoMethodName": "selectByEmployeeId",
+            "daoName": "EmployeeWorkExperienceMapper"
+          },
+          {
+            "cOUNT无": "742",
+            "mAXelapsed": "7593.0",
+            "aVGelapsed": "80.67",
+            "daoMethodName": "deleteByEmployeeId",
+            "daoName": "EmployeeWorkExperienceMapper"
+          },
+          {
+            "cOUNT无": "167",
+            "mAXelapsed": "30.0",
+            "aVGelapsed": "10.7",
+            "daoMethodName": "update",
+            "daoName": "EmployeeWorkExperienceMapper"
+          },
+          {
+            "cOUNT无": "51",
+            "mAXelapsed": "24.0",
+            "aVGelapsed": "9.37",
+            "daoMethodName": "insert",
+            "daoName": "EmployeeWorkExperienceMapper"
+          },
+          {
+            "cOUNT无": "44156",
+            "mAXelapsed": "145.0",
+            "aVGelapsed": "8.61",
+            "daoMethodName": "getByEmployeeId",
+            "daoName": "EmployeePersonnelDocumentMapper"
+          },
+          {
+            "cOUNT无": "52",
+            "mAXelapsed": "23.0",
+            "aVGelapsed": "10.35",
+            "daoMethodName": "update",
+            "daoName": "EmployeePersonnelDocumentMapper"
+          }
+        ]
+      },
+      "服务异常统计": {
+        "heads": [
+          "serviceAppName",
+          "serviceName",
+          "serviceMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "serviceMethodName": "方法名",
+          "serviceAppName": "应用名",
+          "serviceName": "接口名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "1009",
+            "mAXelapsed": "806665.0",
+            "aVGelapsed": "119625.84",
+            "serviceMethodName": "queryRelationList",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "307",
+            "mAXelapsed": "120468.0",
+            "aVGelapsed": "118630.82",
+            "serviceMethodName": "queryWebUserByOpenId",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "31",
+            "mAXelapsed": "805641.0",
+            "aVGelapsed": "142128.29",
+            "serviceMethodName": "queryUserConfig",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "215",
+            "mAXelapsed": "805641.0",
+            "aVGelapsed": "124103.33",
+            "serviceMethodName": "queryEmployeePayrollList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "20",
+            "mAXelapsed": "199408.0",
+            "aVGelapsed": "84833.1",
+            "serviceMethodName": "queryEmployeePayrollDetailList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "60010.0",
+            "serviceMethodName": "updatePayrollOrDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "145",
+            "mAXelapsed": "805641.0",
+            "aVGelapsed": "122129.1",
+            "serviceMethodName": "statisticsTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120007.0",
+            "aVGelapsed": "120007.0",
+            "serviceMethodName": "getTodolistItem",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "38",
+            "mAXelapsed": "4400.0",
+            "aVGelapsed": "634.34",
+            "serviceMethodName": "saveDeclarationInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "33",
+            "mAXelapsed": "173976.0",
+            "aVGelapsed": "93171.42",
+            "serviceMethodName": "queryEmployeeTaxBillDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "60008.0",
+            "serviceMethodName": "statisticalEmployeeTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120008.0",
+            "aVGelapsed": "120008.0",
+            "serviceMethodName": "saveComputeRule",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "26",
+            "mAXelapsed": "29.0",
+            "aVGelapsed": "14.5",
+            "serviceMethodName": "saveEmployeeReportFeedback",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionApi"
+          },
+          {
+            "cOUNT无": "6",
+            "mAXelapsed": "57.0",
+            "aVGelapsed": "49.17",
+            "serviceMethodName": "saveAdditionalDTOFromG2",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionApi"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "120005.0",
+            "aVGelapsed": "80012.0",
+            "serviceMethodName": "addSerial",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionApi"
+          },
+          {
+            "cOUNT无": "34",
+            "mAXelapsed": "120014.0",
+            "aVGelapsed": "110828.71",
+            "serviceMethodName": "compute",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxV2Api"
+          },
+          {
+            "cOUNT无": "33",
+            "mAXelapsed": "186.0",
+            "aVGelapsed": "62.94",
+            "serviceMethodName": "savePayrollRaw",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "13",
+            "mAXelapsed": "120008.0",
+            "aVGelapsed": "110773.31",
+            "serviceMethodName": "chooseDefaultCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "10",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "120001.2",
+            "serviceMethodName": "updateSubscribeStatus",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120013.0",
+            "aVGelapsed": "60028.0",
+            "serviceMethodName": "wechatBind",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "4",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "120001.5",
+            "serviceMethodName": "getPreferPayrollName",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "4",
+            "mAXelapsed": "120015.0",
+            "aVGelapsed": "120007.0",
+            "serviceMethodName": "queryPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "120001.0",
+            "serviceMethodName": "getPayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120008.0",
+            "aVGelapsed": "120008.0",
+            "serviceMethodName": "queryHasPayrollMonth",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "9",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "120002.33",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120011.0",
+            "aVGelapsed": "120006.0",
+            "serviceMethodName": "queryPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "120026.0",
+            "aVGelapsed": "120014.67",
+            "serviceMethodName": "statistic",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120004.0",
+            "aVGelapsed": "100195.0",
+            "serviceMethodName": "queryDeductEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120004.0",
+            "aVGelapsed": "120004.0",
+            "serviceMethodName": "countUnsyncEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "805644.0",
+            "aVGelapsed": "805644.0",
+            "serviceMethodName": "queryEmployeeByEmployeeId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120024.0",
+            "aVGelapsed": "120024.0",
+            "serviceMethodName": "queryPageByCondition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120017.0",
+            "aVGelapsed": "120009.0",
+            "serviceMethodName": "addEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "216.0",
+            "aVGelapsed": "216.0",
+            "serviceMethodName": "addEmployeeList",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120006.0",
+            "aVGelapsed": "120006.0",
+            "serviceMethodName": "getRemindDaysByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120005.0",
+            "aVGelapsed": "120005.0",
+            "serviceMethodName": "updateEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "60008.5",
+            "serviceMethodName": "getByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "2",
+            "mAXelapsed": "120017.0",
+            "aVGelapsed": "120014.0",
+            "serviceMethodName": "addEntranceEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeEntranceApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "120003.0",
+            "serviceMethodName": "scopeStatistics",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionQueryApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "805649.0",
+            "aVGelapsed": "805649.0",
+            "serviceMethodName": "queryDimission",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDimissionApi"
+          }
+        ]
+      },
+      "服务统计报表": {
+        "heads": [
+          "serviceAppName",
+          "serviceName",
+          "serviceMethodName",
+          "cOUNT无",
+          "mAXelapsed",
+          "aVGelapsed"
+        ],
+        "headMap": {
+          "cOUNT无": "总量",
+          "mAXelapsed": "最大耗时",
+          "aVGelapsed": "平均耗时",
+          "serviceMethodName": "方法名",
+          "serviceAppName": "应用名",
+          "serviceName": "接口名"
+        },
+        "dataMapList": [
+          {
+            "cOUNT无": "1182835",
+            "mAXelapsed": "806665.0",
+            "aVGelapsed": "117.21",
+            "serviceMethodName": "queryRelationList",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "666701",
+            "mAXelapsed": "826.0",
+            "aVGelapsed": "2.57",
+            "serviceMethodName": "queryWebUserById",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "601465",
+            "mAXelapsed": "120468.0",
+            "aVGelapsed": "72.84",
+            "serviceMethodName": "queryWebUserByOpenId",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "587435",
+            "mAXelapsed": "1108.0",
+            "aVGelapsed": "2.41",
+            "serviceMethodName": "isWechatPass",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "583442",
+            "mAXelapsed": "805641.0",
+            "aVGelapsed": "22.27",
+            "serviceMethodName": "queryUserConfig",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "3151",
+            "mAXelapsed": "784.0",
+            "aVGelapsed": "42.63",
+            "serviceMethodName": "queryEmployeeWechatMap",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "405",
+            "mAXelapsed": "444.0",
+            "aVGelapsed": "9.4",
+            "serviceMethodName": "queryWebUserByMobile",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualQueryApi"
+          },
+          {
+            "cOUNT无": "680885",
+            "mAXelapsed": "805641.0",
+            "aVGelapsed": "66.32",
+            "serviceMethodName": "queryEmployeePayrollList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "187869",
+            "mAXelapsed": "199408.0",
+            "aVGelapsed": "34.97",
+            "serviceMethodName": "queryEmployeePayrollDetailList",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "113276",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "28.57",
+            "serviceMethodName": "updatePayrollOrDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "6123",
+            "mAXelapsed": "1923.0",
+            "aVGelapsed": "60.99",
+            "serviceMethodName": "queryPayrollAndDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "5558",
+            "mAXelapsed": "467.0",
+            "aVGelapsed": "17.05",
+            "serviceMethodName": "savePayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "5553",
+            "mAXelapsed": "2551.0",
+            "aVGelapsed": "93.73",
+            "serviceMethodName": "savePayroll",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "1615",
+            "mAXelapsed": "1580.0",
+            "aVGelapsed": "219.43",
+            "serviceMethodName": "deletePayroll",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "280",
+            "mAXelapsed": "870.0",
+            "aVGelapsed": "176.39",
+            "serviceMethodName": "repealPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "110",
+            "mAXelapsed": "379.0",
+            "aVGelapsed": "25.07",
+            "serviceMethodName": "queryPayrollByDetailId",
+            "serviceAppName": "gaia",
+            "serviceName": "SalaryApi"
+          },
+          {
+            "cOUNT无": "81235",
+            "mAXelapsed": "120026.0",
+            "aVGelapsed": "64.33",
+            "serviceMethodName": "statistic",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "54905",
+            "mAXelapsed": "120024.0",
+            "aVGelapsed": "31.05",
+            "serviceMethodName": "queryPageByCondition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "51532",
+            "mAXelapsed": "2737.0",
+            "aVGelapsed": "26.03",
+            "serviceMethodName": "queryAllEmployeeByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "49320",
+            "mAXelapsed": "120004.0",
+            "aVGelapsed": "45.95",
+            "serviceMethodName": "countUnsyncEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "43419",
+            "mAXelapsed": "805644.0",
+            "aVGelapsed": "63.45",
+            "serviceMethodName": "queryEmployeeByEmployeeId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "25830",
+            "mAXelapsed": "407.0",
+            "aVGelapsed": "12.71",
+            "serviceMethodName": "queryAllEmployeeByEmployeeIds",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "6778",
+            "mAXelapsed": "120004.0",
+            "aVGelapsed": "61.78",
+            "serviceMethodName": "queryDeductEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "1771",
+            "mAXelapsed": "697.0",
+            "aVGelapsed": "13.33",
+            "serviceMethodName": "queryToSyncEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "857",
+            "mAXelapsed": "418.0",
+            "aVGelapsed": "15.01",
+            "serviceMethodName": "queryEmployeeByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "563",
+            "mAXelapsed": "469.0",
+            "aVGelapsed": "28.15",
+            "serviceMethodName": "contractStat",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "557",
+            "mAXelapsed": "828.0",
+            "aVGelapsed": "18.73",
+            "serviceMethodName": "getByCompanyIdWithoutDimission",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeQueryApi"
+          },
+          {
+            "cOUNT无": "261581",
+            "mAXelapsed": "805641.0",
+            "aVGelapsed": "83.32",
+            "serviceMethodName": "statisticsTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "30017",
+            "mAXelapsed": "482.0",
+            "aVGelapsed": "11.04",
+            "serviceMethodName": "queryTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "1974",
+            "mAXelapsed": "120007.0",
+            "aVGelapsed": "71.22",
+            "serviceMethodName": "getTodolistItem",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "206",
+            "mAXelapsed": "101.0",
+            "aVGelapsed": "47.5",
+            "serviceMethodName": "dealTodolist",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "36",
+            "mAXelapsed": "377.0",
+            "aVGelapsed": "102.17",
+            "serviceMethodName": "createTodolistItemByMaintainNotice",
+            "serviceAppName": "gaia",
+            "serviceName": "TodolistApi"
+          },
+          {
+            "cOUNT无": "262400",
+            "mAXelapsed": "1039.0",
+            "aVGelapsed": "2.68",
+            "serviceMethodName": "queryClientServiceList",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "5529",
+            "mAXelapsed": "486.0",
+            "aVGelapsed": "2.73",
+            "serviceMethodName": "queryBusinessServiceList",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "155",
+            "mAXelapsed": "38.0",
+            "aVGelapsed": "5.72",
+            "serviceMethodName": "queryOrderCount",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "27",
+            "mAXelapsed": "40.0",
+            "aVGelapsed": "32.41",
+            "serviceMethodName": "orderSelfService",
+            "serviceAppName": "gaia",
+            "serviceName": "SelfServiceApi"
+          },
+          {
+            "cOUNT无": "113379",
+            "mAXelapsed": "173976.0",
+            "aVGelapsed": "64.86",
+            "serviceMethodName": "queryEmployeeTaxBillDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "32319",
+            "mAXelapsed": "478.0",
+            "aVGelapsed": "9.61",
+            "serviceMethodName": "queryComputeRule",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "25136",
+            "mAXelapsed": "1651.0",
+            "aVGelapsed": "28.83",
+            "serviceMethodName": "queryEmployeeTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "9238",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "34.55",
+            "serviceMethodName": "statisticalEmployeeTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "3469",
+            "mAXelapsed": "120008.0",
+            "aVGelapsed": "61.12",
+            "serviceMethodName": "saveComputeRule",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "541",
+            "mAXelapsed": "4400.0",
+            "aVGelapsed": "175.48",
+            "serviceMethodName": "saveDeclarationInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "523",
+            "mAXelapsed": "1119.0",
+            "aVGelapsed": "43.65",
+            "serviceMethodName": "getTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "301",
+            "mAXelapsed": "550.0",
+            "aVGelapsed": "34.24",
+            "serviceMethodName": "statisticPushTaxBill",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "120",
+            "mAXelapsed": "212.0",
+            "aVGelapsed": "33.74",
+            "serviceMethodName": "queryPushTaxDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "TaxApi"
+          },
+          {
+            "cOUNT无": "63738",
+            "mAXelapsed": "120015.0",
+            "aVGelapsed": "23.43",
+            "serviceMethodName": "queryPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "28243",
+            "mAXelapsed": "1007.0",
+            "aVGelapsed": "21.69",
+            "serviceMethodName": "queryPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "23860",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "14.83",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "12293",
+            "mAXelapsed": "120001.0",
+            "aVGelapsed": "20.33",
+            "serviceMethodName": "getPayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "11761",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "52.52",
+            "serviceMethodName": "getPreferPayrollName",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "9431",
+            "mAXelapsed": "456.0",
+            "aVGelapsed": "10.31",
+            "serviceMethodName": "getPayrollStatistics",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "9350",
+            "mAXelapsed": "529.0",
+            "aVGelapsed": "10.01",
+            "serviceMethodName": "getEmpIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "8424",
+            "mAXelapsed": "120008.0",
+            "aVGelapsed": "24.14",
+            "serviceMethodName": "queryHasPayrollMonth",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "3252",
+            "mAXelapsed": "1054.0",
+            "aVGelapsed": "53.67",
+            "serviceMethodName": "queryPayrollDetailByPayrollIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "180",
+            "mAXelapsed": "32.0",
+            "aVGelapsed": "17.61",
+            "serviceMethodName": "removePayrollRule",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "12",
+            "mAXelapsed": "16.0",
+            "aVGelapsed": "11.25",
+            "serviceMethodName": "getTaxMonthRange",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollQueryApi"
+          },
+          {
+            "cOUNT无": "58684",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "28.15",
+            "serviceMethodName": "getPayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "51264",
+            "mAXelapsed": "120011.0",
+            "aVGelapsed": "29.4",
+            "serviceMethodName": "queryPayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "36124",
+            "mAXelapsed": "538.0",
+            "aVGelapsed": "9.52",
+            "serviceMethodName": "getEmpIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "7942",
+            "mAXelapsed": "13702.0",
+            "aVGelapsed": "64.3",
+            "serviceMethodName": "getPayrollInfoRepeat",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "7043",
+            "mAXelapsed": "520.0",
+            "aVGelapsed": "10.48",
+            "serviceMethodName": "getEmpIdSetByExcelCacheIds",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawQueryApi"
+          },
+          {
+            "cOUNT无": "64263",
+            "mAXelapsed": "505.0",
+            "aVGelapsed": "2.5",
+            "serviceMethodName": "saveWechatPassValidation",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "9272",
+            "mAXelapsed": "547.0",
+            "aVGelapsed": "46.79",
+            "serviceMethodName": "addCompanyRelation",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "8557",
+            "mAXelapsed": "120013.0",
+            "aVGelapsed": "83.29",
+            "serviceMethodName": "wechatBind",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "7479",
+            "mAXelapsed": "923.0",
+            "aVGelapsed": "25.91",
+            "serviceMethodName": "saveUserConfig",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "6916",
+            "mAXelapsed": "120002.0",
+            "aVGelapsed": "218.1",
+            "serviceMethodName": "updateSubscribeStatus",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "6365",
+            "mAXelapsed": "120008.0",
+            "aVGelapsed": "254.3",
+            "serviceMethodName": "chooseDefaultCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "1206",
+            "mAXelapsed": "427.0",
+            "aVGelapsed": "27.69",
+            "serviceMethodName": "setWechatPassword",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "726",
+            "mAXelapsed": "432.0",
+            "aVGelapsed": "33.97",
+            "serviceMethodName": "wechatUnBind",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "272",
+            "mAXelapsed": "242.0",
+            "aVGelapsed": "57.33",
+            "serviceMethodName": "removeCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "228",
+            "mAXelapsed": "94364.0",
+            "aVGelapsed": "445.74",
+            "serviceMethodName": "h5LoginIncludeRegister",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "114",
+            "mAXelapsed": "62.0",
+            "aVGelapsed": "24.92",
+            "serviceMethodName": "setH5Password",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "1",
+            "mAXelapsed": "49.0",
+            "aVGelapsed": "49.0",
+            "serviceMethodName": "certificateCompany",
+            "serviceAppName": "gaia",
+            "serviceName": "IndividualApi"
+          },
+          {
+            "cOUNT无": "41962",
+            "mAXelapsed": "237.0",
+            "aVGelapsed": "1.08",
+            "serviceMethodName": "queryBusinessParameterValue",
+            "serviceAppName": "gaia",
+            "serviceName": "BusinessParameterApi"
+          },
+          {
+            "cOUNT无": "23762",
+            "mAXelapsed": "118.0",
+            "aVGelapsed": "4.8",
+            "serviceMethodName": "queryBusinessParameter",
+            "serviceAppName": "gaia",
+            "serviceName": "BusinessParameterApi"
+          },
+          {
+            "cOUNT无": "18343",
+            "mAXelapsed": "1176.0",
+            "aVGelapsed": "68.07",
+            "serviceMethodName": "queryHaveAdditionalSnapshootEmployeeIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          },
+          {
+            "cOUNT无": "11969",
+            "mAXelapsed": "498.0",
+            "aVGelapsed": "10.4",
+            "serviceMethodName": "queryCompanyHaveAccumulativeMonthList",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          },
+          {
+            "cOUNT无": "11946",
+            "mAXelapsed": "520.0",
+            "aVGelapsed": "10.93",
+            "serviceMethodName": "queryHaveAccumulativeEmployeeIdList",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          },
+          {
+            "cOUNT无": "9351",
+            "mAXelapsed": "803.0",
+            "aVGelapsed": "16.88",
+            "serviceMethodName": "queryEmployeeAccumulativeInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          },
+          {
+            "cOUNT无": "6180",
+            "mAXelapsed": "2648.0",
+            "aVGelapsed": "86.59",
+            "serviceMethodName": "queryAdditionalSpecialDeduct",
+            "serviceAppName": "gaia",
+            "serviceName": "SnapshootQueryApi"
+          },
+          {
+            "cOUNT无": "17798",
+            "mAXelapsed": "50247.0",
+            "aVGelapsed": "330.3",
+            "serviceMethodName": "updatePayrollDetail",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "17622",
+            "mAXelapsed": "448.0",
+            "aVGelapsed": "19.91",
+            "serviceMethodName": "updatePayrollInfo",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "12559",
+            "mAXelapsed": "4114.0",
+            "aVGelapsed": "106.41",
+            "serviceMethodName": "savePayrollRaw",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "8929",
+            "mAXelapsed": "21019.0",
+            "aVGelapsed": "330.99",
+            "serviceMethodName": "matchPayrollRawEmployee",
+            "serviceAppName": "gaia",
+            "serviceName": "PayrollRawApi"
+          },
+          {
+            "cOUNT无": "53123",
+            "mAXelapsed": "805.0",
+            "aVGelapsed": "2.75",
+            "serviceMethodName": "getFunctionLimitByLocationCode",
+            "serviceAppName": "gaia",
+            "serviceName": "FunctionLimitApi"
+          },
+          {
+            "cOUNT无": "43158",
+            "mAXelapsed": "120003.0",
+            "aVGelapsed": "16.07",
+            "serviceMethodName": "getByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "256",
+            "mAXelapsed": "199.0",
+            "aVGelapsed": "24.8",
+            "serviceMethodName": "addDepartment",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "103",
+            "mAXelapsed": "69.0",
+            "aVGelapsed": "6.15",
+            "serviceMethodName": "getSubDepartments",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "44",
+            "mAXelapsed": "62.0",
+            "aVGelapsed": "29.55",
+            "serviceMethodName": "updateDepartment",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "3",
+            "mAXelapsed": "137.0",
+            "aVGelapsed": "70.67",
+            "serviceMethodName": "deleteDepartment",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeeDepartmentApi"
+          },
+          {
+            "cOUNT无": "42752",
+            "mAXelapsed": "12908.0",
+            "aVGelapsed": "9.06",
+            "serviceMethodName": "selectByCompanyId",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "265",
+            "mAXelapsed": "307.0",
+            "aVGelapsed": "49.72",
+            "serviceMethodName": "addPosition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "40",
+            "mAXelapsed": "139.0",
+            "aVGelapsed": "100.38",
+            "serviceMethodName": "updatePosition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "9",
+            "mAXelapsed": "139.0",
+            "aVGelapsed": "73.44",
+            "serviceMethodName": "deletePosition",
+            "serviceAppName": "gaia",
+            "serviceName": "EmployeePositionApi"
+          },
+          {
+            "cOUNT无": "30622",
+            "mAXelapsed": "272.0",
+            "aVGelapsed": "4.32",
+            "serviceMethodName": "getEmployees",
+            "serviceAppName": "gaia",
+            "serviceName": "GaiaEmployeeApi"
+          },
+          {
+            "cOUNT无": "9496",
+            "mAXelapsed": "457.0",
+            "aVGelapsed": "6.62",
+            "serviceMethodName": "getEmployeeList",
+            "serviceAppName": "gaia",
+            "serviceName": "GaiaEmployeeApi"
+          },
+          {
+            "cOUNT无": "1581",
+            "mAXelapsed": "1419.0",
+            "aVGelapsed": "24.35",
+            "serviceMethodName": "getByName",
+            "serviceAppName": "gaia",
+            "serviceName": "GaiaEmployeeApi"
+          },
+          {
+            "cOUNT无": "22505",
+            "mAXelapsed": "120005.0",
+            "aVGelapsed": "28.21",
+            "serviceMethodName": "addSerial",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionApi"
+          },
+          {
+            "cOUNT无": "5778",
+            "mAXelapsed": "649.0",
+            "aVGelapsed": "101.95",
+            "serviceMethodName": "deleteAllAdditionalInPhysical",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionApi"
+          },
+          {
+            "cOUNT无": "5630",
+            "mAXelapsed": "6005.0",
+            "aVGelapsed": "204.76",
+            "serviceMethodName": "saveAdditionalDTOFromG2",
+            "serviceAppName": "gaia",
+            "serviceName": "DeductionApi"
+          }
+        ]
+      }
+    }
+  }
+}
