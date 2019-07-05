@@ -42,6 +42,7 @@
         <module>design-pattern</module>
         <module>java核心技术36讲</module>
         <module>java-collection</module>
+        <module>weekly-report</module>
     </modules>
 	<packaging>pom</packaging>
 
