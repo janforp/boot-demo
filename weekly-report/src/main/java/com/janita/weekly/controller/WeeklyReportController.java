@@ -67,8 +67,8 @@ public class WeeklyReportController {
         return s;
     }
 
-    @PostMapping("/c")
-    public ResultDTO c(@RequestBody String s) {
+    @PostMapping("/createWeekReport")
+    public ResultDTO createWeekReport(@RequestBody String s) {
         DTO dto = JSON.parseObject(s, DTO.class);
         DataDTO last = dto.getLast();
         DataDTO current = dto.getCurrent();
