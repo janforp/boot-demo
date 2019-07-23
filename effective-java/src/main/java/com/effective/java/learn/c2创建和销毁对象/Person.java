@@ -40,6 +40,9 @@ public class Person {
     }
 
     public boolean isBabyBoomer2() {
+        // System.gc();
+        // System.runFinalization();
+        // System.runFinalizersOnExit(true);
         return birthDate.compareTo(BOOM_START) >= 0 && birthDate.compareTo(BOOM_END) < 0;
     }
 }
