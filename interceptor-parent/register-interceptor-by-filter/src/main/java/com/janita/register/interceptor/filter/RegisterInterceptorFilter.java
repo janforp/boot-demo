@@ -29,6 +29,7 @@ public class RegisterInterceptorFilter extends OncePerRequestFilter {
         System.out.println("RegisterInterceptorFilter - initFilterBean");
         WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
         AutowireCapableBeanFactory factory = context.getAutowireCapableBeanFactory();
+        System.out.println(factory);
         if (factory != null) {
             RegisteredInterceptor interceptor;
             if (factory.containsBean(RegisteredInterceptor.class.getName())) {
