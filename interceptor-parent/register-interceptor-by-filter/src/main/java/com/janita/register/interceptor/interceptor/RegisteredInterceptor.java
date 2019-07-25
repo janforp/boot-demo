@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author zhucj
  * @since 2019-07-25 - 10:38
  */
-public class AuthenticationHandlerInterceptor implements HandlerInterceptor, InitializingBean, ApplicationListener<ContextRefreshedEvent> {
+public class RegisteredInterceptor implements HandlerInterceptor, InitializingBean, ApplicationListener<ContextRefreshedEvent> {
 
     @Override
     public void afterPropertiesSet() throws Exception {

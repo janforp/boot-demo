@@ -1,6 +1,6 @@
 package com.janita.register.interceptor.filter;
 
-import com.janita.register.interceptor.interceptor.AuthenticationHandlerInterceptor;
+import com.janita.register.interceptor.interceptor.RegisteredInterceptor;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.web.context.WebApplicationContext;
@@ -30,15 +30,15 @@ public class RegisterInterceptorFilter extends OncePerRequestFilter {
         WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
         AutowireCapableBeanFactory factory = context.getAutowireCapableBeanFactory();
         if (factory != null) {
-            AuthenticationHandlerInterceptor interceptor;
-            if (factory.containsBean(AuthenticationHandlerInterceptor.class.getName())) {
-                //org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.janita.register.interceptor.interceptor.AuthenticationHandlerInterceptor' available
-                interceptor = factory.getBean(AuthenticationHandlerInterceptor.class);
+            RegisteredInterceptor interceptor;
+            if (factory.containsBean(RegisteredInterceptor.class.getName())) {
+                //org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.janita.register.interceptor.interceptor.RegisteredInterceptor' available
+                interceptor = factory.getBean(RegisteredInterceptor.class);
             } else {
-                interceptor = factory.createBean(AuthenticationHandlerInterceptor.class);
+                interceptor = factory.createBean(RegisteredInterceptor.class);
             }
             MappedInterceptor mappedInterceptor = new MappedInterceptor(null, interceptor);
-            ((DefaultListableBeanFactory) factory).registerSingleton(AuthenticationHandlerInterceptor.class.getName(), mappedInterceptor);
+            ((DefaultListableBeanFactory) factory).registerSingleton(RegisteredInterceptor.class.getName(), mappedInterceptor);
         }
     }
 
