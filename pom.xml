@@ -47,7 +47,8 @@
         <module>effective-java</module>
         <module>about-excel</module>
 		<module>interceptor-parent</module>
-	</modules>
+        <module>spring-base</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
