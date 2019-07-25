@@ -46,7 +46,8 @@
         <module>weekly-report</module>
         <module>effective-java</module>
         <module>about-excel</module>
-    </modules>
+		<module>interceptor-parent</module>
+	</modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
