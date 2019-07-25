@@ -34,6 +34,7 @@ public class RegisterInterceptorFilter extends OncePerRequestFilter {
             RegisteredInterceptor interceptor;
             if (factory.containsBean(RegisteredInterceptor.class.getName())) {
                 //org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.janita.register.interceptor.interceptor.RegisteredInterceptor' available
+                //如果不提供空的 afterPropertiesSet 实现，在启动的时候会报错，报错内容如上，为什么？
                 interceptor = factory.getBean(RegisteredInterceptor.class);
             } else {
                 interceptor = factory.createBean(RegisteredInterceptor.class);
@@ -47,5 +48,10 @@ public class RegisterInterceptorFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
         throws ServletException, IOException {
         filterChain.doFilter(request, response);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws ServletException {
+        //empty
     }
 }
