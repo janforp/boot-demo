@@ -2,6 +2,7 @@ package com.janita.check.auth.aspect;
 
 import com.google.common.collect.Lists;
 import com.janita.check.auth.annotation.CheckAuth;
+import com.janita.check.auth.role.RoleCheckResolver;
 import com.janita.check.auth.service.CheckAuthService;
 import com.janita.check.auth.utils.HttpHeaderUtils;
 import lombok.AllArgsConstructor;
@@ -17,7 +18,7 @@ import static com.janita.check.auth.role.Role.getByCode;
 import static com.janita.check.auth.utils.HttpHeaderUtils.USER_ROLE;
 
 /**
- * 类说明：
+ * 类说明：角色校验
  *
  * @author zhucj
  * @since 2019-07-25 - 14:31
@@ -26,6 +27,8 @@ import static com.janita.check.auth.utils.HttpHeaderUtils.USER_ROLE;
 public class CheckAuthInterceptor extends HandlerInterceptorAdapter {
 
     private CheckAuthService webTokenService;
+
+    private RoleCheckResolver roleCheckResolver;
 
     private static ThreadLocal<Boolean> passValid = ThreadLocal.withInitial(() -> Boolean.FALSE);
 
@@ -43,10 +46,12 @@ public class CheckAuthInterceptor extends HandlerInterceptorAdapter {
             return true;
         }
         String role = HttpHeaderUtils.getRequestHeader(USER_ROLE);
-        if (StringUtils.isEmpty(role)) {
-            throw new IllegalArgumentException("你是什么角色");
+        if (roleCheckResolver == null || roleCheckResolver.needCheck()) {
+            if (StringUtils.isEmpty(role)) {
+                throw new IllegalArgumentException("你是什么角色？");
+            }
+            webTokenService.checkAuth(getByCode(Integer.valueOf(role)), Lists.newArrayList(checkAuth.role()));
         }
-        webTokenService.checkAuth(getByCode(Integer.valueOf(role)), Lists.newArrayList(checkAuth.role()));
         return true;
     }
 
