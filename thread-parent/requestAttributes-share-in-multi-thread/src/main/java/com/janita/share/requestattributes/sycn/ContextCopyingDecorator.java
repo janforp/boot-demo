@@ -1,6 +1,5 @@
 package com.janita.share.requestattributes.sycn;
 
-import org.slf4j.MDC;
 import org.springframework.core.task.TaskDecorator;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -15,10 +14,8 @@ public class ContextCopyingDecorator implements TaskDecorator {
         return () -> {
             try {
                 RequestContextHolder.setRequestAttributes(context);
-                Map<String, String> copyOfContextMap = MDC.getCopyOfContextMap();
                 runnable.run();
             } finally {
-                MDC.clear();
                 RequestContextHolder.resetRequestAttributes();
             }
         };
