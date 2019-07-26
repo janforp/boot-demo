@@ -50,7 +50,8 @@
         <module>spring-base</module>
         <module>listener-parent</module>
 		<module>model-mapper</module>
-	</modules>
+        <module>thread-parent</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
