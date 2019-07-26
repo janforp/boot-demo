@@ -18,7 +18,7 @@ public class ShareService {
 
     public String sendEmail(String userId) throws InterruptedException {
         String password = RequestAttributesContext.getByKey(RequestAttributesContext.PASS_WORD);
-        System.out.println("密码 = " + password);
+        System.out.println("ShareService获取的密码 = " + password);
         helper.sendEmail(userId);
         return "success";
     }
