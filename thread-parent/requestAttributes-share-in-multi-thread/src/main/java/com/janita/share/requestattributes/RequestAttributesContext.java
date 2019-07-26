@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author bobo
  */
-public class AuthContext {
+public class RequestAttributesContext {
+
+    public static final String PASS_WORD = "password";
 
     public static String getRequestHeader(String headerName) {
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
@@ -24,7 +26,7 @@ public class AuthContext {
     }
 
     public static void setKeyValueToRequest(String key, String value) {
-        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
             HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
             request.setAttribute(key, value);
@@ -32,12 +34,13 @@ public class AuthContext {
     }
 
     public static String getByKey(String key) {
-        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        String value = null;
+        RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
             HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
-            return (String) request.getAttribute(key);
+            value = (String) request.getAttribute(key);
         }
-        return null;
+        return value;
     }
 
 }
