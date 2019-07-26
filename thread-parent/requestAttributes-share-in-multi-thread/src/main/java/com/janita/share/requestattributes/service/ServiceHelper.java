@@ -15,6 +15,6 @@ public class ServiceHelper {
     public void sendEmail(String userId) throws InterruptedException {
         Thread.sleep(2000);
         String password = RequestAttributesContext.getByKey(PASS_WORD);
-        CommonUtils.print("发送邮件给 " + userId+ "，ServiceHelper获取到的密码是 " + password);
+        CommonUtils.print("ServiceHelper获取到的密码是 " + password);
     }
 }
