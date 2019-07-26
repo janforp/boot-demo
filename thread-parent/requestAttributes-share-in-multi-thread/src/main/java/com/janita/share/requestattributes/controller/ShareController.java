@@ -26,7 +26,6 @@ public class ShareController {
     @GetMapping("/sendEmail")
     public String sendEmail(String userId) throws InterruptedException {
         RequestAttributesContext.setKeyValueToRequest(PASS_WORD, "123456");
-        shareService.sendEmail(userId);
-        return "success";
+        return shareService.sendEmail(userId);
     }
 }
