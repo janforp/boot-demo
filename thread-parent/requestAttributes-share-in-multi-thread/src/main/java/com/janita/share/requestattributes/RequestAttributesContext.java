@@ -1,5 +1,6 @@
 package com.janita.share.requestattributes;
 
+import com.boot.demo.common.util.CommonUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -7,7 +8,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- *
  * A context holder class for holding the current userId and authz info
  *
  * @author bobo
@@ -19,7 +19,7 @@ public class RequestAttributesContext {
     public static String getRequestHeader(String headerName) {
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
-            HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
+            HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
             return request.getHeader(headerName);
         }
         return null;
@@ -28,8 +28,8 @@ public class RequestAttributesContext {
     public static void setKeyValueToRequest(String key, String value) {
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
-            HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
-            System.out.println(request);
+            HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
+            CommonUtils.print(request);
             request.setAttribute(key, value);
         }
     }
@@ -38,8 +38,8 @@ public class RequestAttributesContext {
         String value = null;
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
-            HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
-            System.out.println(request);
+            HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
+            CommonUtils.print(request);
             value = (String) request.getAttribute(key);
         }
         return value;
