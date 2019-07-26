@@ -29,6 +29,7 @@ public class RequestAttributesContext {
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
             HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
+            System.out.println(request);
             request.setAttribute(key, value);
         }
     }
@@ -38,6 +39,7 @@ public class RequestAttributesContext {
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
             HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
+            System.out.println(request);
             value = (String) request.getAttribute(key);
         }
         return value;
