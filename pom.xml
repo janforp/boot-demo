@@ -49,7 +49,8 @@
 		<module>interceptor-parent</module>
         <module>spring-base</module>
         <module>listener-parent</module>
-    </modules>
+		<module>model-mapper</module>
+	</modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
