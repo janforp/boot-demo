@@ -15,6 +15,7 @@
         <module>pub-sub-parent</module>
         <module>boot-redis</module>
         <module>redis-common</module>
+        <module>pub-sub-demo</module>
     </modules>
 
 

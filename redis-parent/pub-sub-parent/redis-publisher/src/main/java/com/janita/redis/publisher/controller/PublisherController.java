@@ -22,6 +22,7 @@ public class PublisherController {
     @GetMapping("/publish")
     public String publish(String message) {
         template.set("1", "2");
+        template.convertAndSend("1", "2");
         return message;
     }
 }
