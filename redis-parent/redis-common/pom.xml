@@ -9,18 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pub-sub-parent</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>redis-publisher</module>
-        <module>redis-subscriber</module>
-    </modules>
+    <artifactId>redis-common</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.boot.demo</groupId>
-            <artifactId>redis-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 </project>
