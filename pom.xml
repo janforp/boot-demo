@@ -18,10 +18,8 @@
 		<module>boot-properties</module>
 		<module>boot-aop</module>
 		<module>boot-task</module>
-        <module>boot-redis</module>
         <module>boot-dubbo-provider</module>
 		<module>boot-dubbo-consumer</module>
-		<module>boot-interceptor</module>
 		<module>boot-dubbo-api</module>
         <module>boot-mybatis-auto-gen</module>
         <module>boot-filter-listener</module>
@@ -51,6 +49,7 @@
         <module>listener-parent</module>
 		<module>model-mapper</module>
         <module>thread-parent</module>
+        <module>redis-parent</module>
     </modules>
 	<packaging>pom</packaging>
 
