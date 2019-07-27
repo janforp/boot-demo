@@ -25,8 +25,7 @@ public class SubscriberListener implements MessageListener {
     @Override
     public void onMessage(Message message, byte[] pattern) {
         String channel = stringRedisSerializer.deserialize(message.getChannel());
-        byte[] body = message.getBody();
         Object obj = redisSerializer.deserialize(message.getBody());
-        System.out.println(message);
+        System.out.println("channel = " + channel + ", 消息 = " + obj.toString());
     }
 }

@@ -25,6 +25,7 @@ public class RedisConfig {
         return new StringRedisSerializer();
     }
 
+    @Bean
     public RedisSerializer redisSerializer() {
         return new JdkSerializationRedisSerializer();
     }
