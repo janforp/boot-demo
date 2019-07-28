@@ -26,6 +26,6 @@ public class SubscriberListener implements MessageListener {
     public void onMessage(Message message, byte[] pattern) {
         String channel = stringRedisSerializer.deserialize(message.getChannel());
         Object obj = redisSerializer.deserialize(message.getBody());
-        System.out.println("【订阅者1】channel = " + channel + ", 消息 = " + obj.toString());
+        System.out.println("【订阅者2】channel = " + channel + ", 消息 = " + obj.toString());
     }
 }
