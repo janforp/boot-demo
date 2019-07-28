@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.demo.auto.dao.StiTestTableDAO">
+    <resultMap id="BaseResultMap" type="com.boot.demo.auto.entity.StiTestTable">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="company_id" property="companyId" jdbcType="BIGINT"/>
+        <result column="field1" property="field1" jdbcType="VARCHAR"/>
+        <result column="field2" property="field2" jdbcType="VARCHAR"/>
+        <result column="field3" property="field3" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="SELECT_All_Column">
+        SELECT id, company_id, field1, field2, field3, 
+        create_date, modify_date
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.boot.demo.auto.entity.StiTestTable">
+        SELECT *
+        FROM sti_test_table
+        WHERE id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.boot.demo.auto.entity.StiTestTable">
+        DELETE FROM sti_test_table
+        WHERE id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="com.boot.demo.auto.entity.StiTestTable">
+        INSERT INTO sti_test_table ( company_id, 
+          field1, field2, field3, 
+          create_date, modify_date )
+        VALUES ( #{companyId,jdbcType=BIGINT}, 
+          #{field1,jdbcType=VARCHAR}, #{field2,jdbcType=VARCHAR}, #{field3,jdbcType=VARCHAR}, 
+          #{createDate,jdbcType=TIMESTAMP}, #{modifyDate,jdbcType=TIMESTAMP} )
+        <selectKey keyProperty="id" resultType="long">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertSelective" parameterType="com.boot.demo.auto.entity.StiTestTable">
+        INSERT INTO sti_test_table
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="companyId != null">
+                company_id,
+            </if>
+            <if test="field1 != null">
+                field1,
+            </if>
+            <if test="field2 != null">
+                field2,
+            </if>
+            <if test="field3 != null">
+                field3,
+            </if>
+            <if test="createDate != null">
+                create_date,
+            </if>
+            <if test="modifyDate != null">
+                modify_date,
+            </if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="companyId != null">
+                #{companyId,jdbcType=BIGINT},
+            </if>
+            <if test="field1 != null">
+                #{field1,jdbcType=VARCHAR},
+            </if>
+            <if test="field2 != null">
+                #{field2,jdbcType=VARCHAR},
+            </if>
+            <if test="field3 != null">
+                #{field3,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyDate != null">
+                #{modifyDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+        <selectKey keyProperty="id" resultType="long">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+    </insert>
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO sti_test_table ( company_id, 
+          field1, field2, field3, 
+          create_date, modify_date )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator="," >
+            (
+            #{item.companyId,jdbcType=BIGINT}, 
+            #{item.field1,jdbcType=VARCHAR}, #{item.field2,jdbcType=VARCHAR}, #{item.field3,jdbcType=VARCHAR}, 
+            #{item.createDate,jdbcType=TIMESTAMP}, #{item.modifyDate,jdbcType=TIMESTAMP}
+            )
+        </foreach>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.boot.demo.auto.entity.StiTestTable">
+        UPDATE sti_test_table
+        <set>
+            <if test="companyId != null">
+                company_id = #{companyId,jdbcType=BIGINT},
+            </if>
+            <if test="field1 != null">
+                field1 = #{field1,jdbcType=VARCHAR},
+            </if>
+            <if test="field2 != null">
+                field2 = #{field2,jdbcType=VARCHAR},
+            </if>
+            <if test="field3 != null">
+                field3 = #{field3,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyDate != null">
+                modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        WHERE id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.boot.demo.auto.entity.StiTestTable">
+        UPDATE sti_test_table
+        SET company_id = #{companyId,jdbcType=BIGINT},
+            field1 = #{field1,jdbcType=VARCHAR},
+            field2 = #{field2,jdbcType=VARCHAR},
+            field3 = #{field3,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            modify_date = #{modifyDate,jdbcType=TIMESTAMP}
+        WHERE id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

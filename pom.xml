@@ -50,6 +50,7 @@
 		<module>model-mapper</module>
         <module>thread-parent</module>
         <module>redis-parent</module>
+        <module>mybatis-parent</module>
     </modules>
 	<packaging>pom</packaging>
 
