@@ -17,9 +17,6 @@
 		<module>boot-properties</module>
 		<module>boot-aop</module>
 		<module>boot-task</module>
-        <module>boot-dubbo-provider</module>
-		<module>boot-dubbo-consumer</module>
-		<module>boot-dubbo-api</module>
         <module>boot-filter-listener</module>
 		<module>boot-profiles-active</module>
 		<module>boot-actuator</module>
@@ -47,7 +44,8 @@
         <module>thread-parent</module>
         <module>redis-parent</module>
         <module>mybatis-parent</module>
-    </modules>
+		<module>dubbo-parent</module>
+	</modules>
 	<packaging>pom</packaging>
 
 	<name>boot-demo</name>
