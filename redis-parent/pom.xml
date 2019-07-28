@@ -16,6 +16,7 @@
         <module>boot-redis</module>
         <module>redis-common</module>
         <module>pub-sub-demo</module>
+        <module>boot-auto-redis</module>
     </modules>
 
 

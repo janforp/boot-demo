@@ -7,7 +7,6 @@
 	<artifactId>boot-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
-		<module>boot-mybatis</module>
 		<module>boot-hello</module>
 		<module>boot-common</module>
 		<module>boot-jpa</module>
@@ -21,16 +20,13 @@
         <module>boot-dubbo-provider</module>
 		<module>boot-dubbo-consumer</module>
 		<module>boot-dubbo-api</module>
-        <module>boot-mybatis-auto-gen</module>
         <module>boot-filter-listener</module>
 		<module>boot-profiles-active</module>
 		<module>boot-actuator</module>
 		<module>boot-druid-monitor</module>
-        <module>boot-mybatis2</module>
 		<module>boot-caffeinecache</module>
         <module>boot-web-async-task</module>
         <module>boot-deep</module>
-        <module>boot-auto-redis</module>
         <module>java8-demo</module>
 		<module>pattern-matcher</module>
         <module>xml-module</module>
