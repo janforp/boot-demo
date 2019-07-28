@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>requestAttributes-share-in-multi-thread</module>
+        <module>boot-web-async-task</module>
     </modules>
 
 
