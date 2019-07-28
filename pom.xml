@@ -39,6 +39,7 @@
         <module>mybatis-parent</module>
 		<module>dubbo-parent</module>
 		<module>java-learn-parent</module>
+		<module>aop-parent</module>
 	</modules>
 	<packaging>pom</packaging>
 
