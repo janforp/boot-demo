@@ -51,7 +51,7 @@ public class ManualDispatchServlet extends HttpServlet {
     /**
      * key:bean的全路径名称，value：该bean的唯一实例
      */
-    private Map<String, Object> iocContainer = new HashMap<>();
+    private Map<String, Object> beanNameToInstanceIocContainer = new HashMap<>();
 
     /**
      * key：url，value：对应controller实例
@@ -186,7 +186,7 @@ public class ManualDispatchServlet extends HttpServlet {
     }
 
     /**
-     * 实例化列表 allClassNameInScanPackage 中的bean，只实例化 带有标注 LPController 以及 LPService 的类，并把他们放到容器 iocContainer 中
+     * 实例化列表 allClassNameInScanPackage 中的bean，只实例化 带有标注 LPController 以及 LPService 的类，并把他们放到容器 beanNameToInstanceIocContainer 中
      */
     private void doInstance() {
         if (allClassNameInScanPackage.isEmpty()) {
@@ -197,12 +197,12 @@ public class ManualDispatchServlet extends HttpServlet {
                 // 把类搞出来,反射来实例化(只有加@MyController需要实例化)
                 Class<?> clazz = Class.forName(className);
                 if (clazz.isAnnotationPresent(LPController.class)) {
-                    iocContainer.put(toLowerFirstWord(clazz.getSimpleName()), clazz.newInstance());
+                    beanNameToInstanceIocContainer.put(toLowerFirstWord(clazz.getSimpleName()), clazz.newInstance());
                 } else if (clazz.isAnnotationPresent(LPService.class)) {
                     Object instance = clazz.newInstance();
                     LPService service = clazz.getAnnotation(LPService.class);
                     String key = service.value();
-                    iocContainer.put(key, instance);
+                    beanNameToInstanceIocContainer.put(key, instance);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -211,11 +211,11 @@ public class ManualDispatchServlet extends HttpServlet {
     }
 
     private void initHandlerMapping() {
-        if (iocContainer.isEmpty()) {
+        if (beanNameToInstanceIocContainer.isEmpty()) {
             return;
         }
         try {
-            for (Entry<String, Object> entry : iocContainer.entrySet()) {
+            for (Entry<String, Object> entry : beanNameToInstanceIocContainer.entrySet()) {
                 Class<?> clazz = entry.getValue().getClass();
                 if (!clazz.isAnnotationPresent(LPController.class)) {
                     continue;
@@ -251,11 +251,11 @@ public class ManualDispatchServlet extends HttpServlet {
      * 给被AutoWired注解的属性注入值
      */
     private void doAutoWired() {
-        if (iocContainer.isEmpty()) {
+        if (beanNameToInstanceIocContainer.isEmpty()) {
             return;
         }
         // 遍历所有被托管的对象
-        for (Map.Entry<String, Object> entry : iocContainer.entrySet()) {
+        for (Map.Entry<String, Object> entry : beanNameToInstanceIocContainer.entrySet()) {
             // 查找所有被Autowired注解的属性
             // getFields()获得某个类的所有的公共（public）的字段，包括父类;
             // getDeclaredFields()获得某个类的所有申明的字段，即包括public、private和proteced，但是不包括父类的申明字段。
@@ -279,9 +279,9 @@ public class ManualDispatchServlet extends HttpServlet {
                 // 将私有化的属性设为true,不然访问不到
                 field.setAccessible(true);
                 // 去映射中找是否存在该beanName对应的实例对象
-                if (iocContainer.get(beanName) != null) {
+                if (beanNameToInstanceIocContainer.get(beanName) != null) {
                     try {
-                        field.set(instance, iocContainer.get(beanName));
+                        field.set(instance, beanNameToInstanceIocContainer.get(beanName));
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
