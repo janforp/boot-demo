@@ -1,10 +1,5 @@
 package com.manual.mvc.dispatch;
 
-/**
- * 类说明：
- *
- * @since 2019-07-29 - 16:15
- */
 
 import com.manual.mvc.annotation.LPAutowired;
 import com.manual.mvc.annotation.LPController;
@@ -26,17 +21,20 @@ import java.util.Map.Entry;
 import java.util.Properties;
 
 import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static com.manual.mvc.utils.AssertUtils.assertNotNull;
+
 /**
- * @author linpeng<br       />
- * @version Revision 1.0.0
- * @since JDK 1.7
+ * 类说明：
+ *
+ * @author janita
+ * @since 2019-07-29 - 16:15
  */
-public class LPDispatchServlet extends HttpServlet {
+public class ManualDispatchServlet extends HttpServlet {
+
     private Properties properties = new Properties();
 
     private List<String> classNames = new ArrayList<>();
@@ -48,7 +46,7 @@ public class LPDispatchServlet extends HttpServlet {
     private Map<String, Object> controllerMap = new HashMap<>();
 
     @Override
-    public void init(ServletConfig config) throws ServletException {
+    public void init(ServletConfig config) {
         // 1.加载配置文件
         doLoadConfig(config.getInitParameter("contextConfigLocation"));
         // 2.初始化所有相关联的类,扫描用户设定的包下面所有的类
@@ -62,17 +60,14 @@ public class LPDispatchServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO Auto-generated method stub
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         System.out.println("doGet");
         this.doPost(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO Auto-generated method stub
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         System.out.println("doPost");
-        // super.doPost(req, resp);
         if (handlerMapping.isEmpty()) {
             return;
         }
@@ -94,19 +89,19 @@ public class LPDispatchServlet extends HttpServlet {
         for (int i = 0; i < parameterTypes.length; i++) {
             // 根据参数名称，做某些处理
             String requestParam = parameterTypes[i].getSimpleName();
-            if (requestParam.equals("HttpServletRequest")) {
+            if ("HttpServletRequest".equals(requestParam)) {
                 // 参数类型已明确，这边强转类型
                 paramValues[i] = req;
                 continue;
             }
-            if (requestParam.equals("HttpServletResponse")) {
+            if ("HttpServletResponse".equals(requestParam)) {
                 paramValues[i] = resp;
                 continue;
             }
-            if (requestParam.equals("String")) {
+            if ("String".equals(requestParam)) {
                 for (Entry<String, String[]> param : parameterMap.entrySet()) {
                     String[] paramValue = param.getValue();
-                    String value = Arrays.toString(paramValue).replaceAll("\\[|\\]", "").replaceAll(",\\s", ",");
+                    String value = Arrays.toString(paramValue).replaceAll("\\[|]", "").replaceAll(",\\s", ",");
                     paramValues[i++] = value;
                 }
             }
@@ -145,8 +140,12 @@ public class LPDispatchServlet extends HttpServlet {
     private void doScanner(String packageName) {
         // 把所有的.替换成/
         URL url = this.getClass().getClassLoader().getResource("/" + packageName.replaceAll("\\.", "/"));
+        assertNotNull(url, "url");
         File dir = new File(url.getFile());
-        for (File file : dir.listFiles()) {
+        assertNotNull(dir, "dir");
+        File[] files = dir.listFiles();
+        assertNotNull(files, "dir");
+        for (File file : files) {
             if (file.isDirectory()) {
                 // 递归读取包
                 doScanner(packageName + "." + file.getName());
@@ -169,17 +168,12 @@ public class LPDispatchServlet extends HttpServlet {
                     ioc.put(toLowerFirstWord(clazz.getSimpleName()), clazz.newInstance());
                 } else if (clazz.isAnnotationPresent(LPService.class)) {
                     Object instance = clazz.newInstance();
-                    LPService service = (LPService) clazz.getAnnotation(LPService.class);
+                    LPService service = clazz.getAnnotation(LPService.class);
                     String key = service.value();
                     ioc.put(key, instance);
-
-                } else {
-                    continue;
                 }
-
             } catch (Exception e) {
                 e.printStackTrace();
-                continue;
             }
         }
     }
@@ -190,7 +184,7 @@ public class LPDispatchServlet extends HttpServlet {
         }
         try {
             for (Entry<String, Object> entry : ioc.entrySet()) {
-                Class<? extends Object> clazz = entry.getValue().getClass();
+                Class<?> clazz = entry.getValue().getClass();
                 if (!clazz.isAnnotationPresent(LPController.class)) {
                     continue;
                 }
@@ -214,14 +208,11 @@ public class LPDispatchServlet extends HttpServlet {
                     controllerMap.put(url, instance);
                     System.out.println(url + "," + method);
                 }
-
-
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     /**

@@ -22,6 +22,9 @@ public class TestController {
     @LPAutowired
     private LoginService loginService;
 
+    /**
+     * 测试接口：http://localhost:8080/mvc/test/login?account=jay&pwd=2323
+     */
     @LPRequestMapping("/login")
     public void login(HttpServletRequest request, HttpServletResponse response, String account, String pwd) throws IOException {
         loginService.login(account, pwd);

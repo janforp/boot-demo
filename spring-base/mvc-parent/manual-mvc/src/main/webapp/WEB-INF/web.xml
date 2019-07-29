@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
     <servlet>
         <servlet-name>MySpringMVC</servlet-name>
-        <servlet-class>com.manual.mvc.dispatch.LPDispatchServlet</servlet-class>
+        <servlet-class>com.manual.mvc.dispatch.ManualDispatchServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>application.properties</param-value>
