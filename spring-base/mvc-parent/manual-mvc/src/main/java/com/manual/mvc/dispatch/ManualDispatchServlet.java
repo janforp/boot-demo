@@ -35,6 +35,7 @@ import static com.manual.mvc.utils.AssertUtils.assertNotNull;
  */
 public class ManualDispatchServlet extends HttpServlet {
 
+    @SuppressWarnings("all")
     private static final String REG = "\\[|]";
 
     /**
