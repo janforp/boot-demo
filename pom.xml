@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.boot.demo</groupId>
-	<artifactId>boot-demo</artifactId>
+	<artifactId>spring-all</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		<module>boot-hello</module>
