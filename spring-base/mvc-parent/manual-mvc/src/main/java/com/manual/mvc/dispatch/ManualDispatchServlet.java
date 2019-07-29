@@ -35,15 +35,33 @@ import static com.manual.mvc.utils.AssertUtils.assertNotNull;
  */
 public class ManualDispatchServlet extends HttpServlet {
 
+    private static final String REG = "\\[|]";
+
+    /**
+     * 配置文件
+     */
     private Properties properties = new Properties();
 
-    private List<String> classNames = new ArrayList<>();
+    /**
+     * 用于保存扫描包路径下的所有类的全路径名称
+     */
+    private List<String> allClassNameInScanPackage = new ArrayList<>();
 
-    private Map<String, Object> ioc = new HashMap<>();
+    /**
+     * key:bean的全路径名称，value：该bean的唯一实例
+     */
+    private Map<String, Object> iocContainer = new HashMap<>();
 
-    private Map<String, Method> handlerMapping = new HashMap<>();
+    /**
+     * key：url，value：对应controller实例
+     */
+    private Map<String, Object> urlControllerMap = new HashMap<>();
 
-    private Map<String, Object> controllerMap = new HashMap<>();
+    /**
+     * key:url,value:对应该路径的处理方法，当然是某个controller中的方法
+     */
+    private Map<String, Method> handlerMethodMapping = new HashMap<>();
+
 
     @Override
     public void init(ServletConfig config) {
@@ -68,17 +86,17 @@ public class ManualDispatchServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         System.out.println("doPost");
-        if (handlerMapping.isEmpty()) {
+        if (handlerMethodMapping.isEmpty()) {
             return;
         }
         String url = req.getRequestURI();
         String contextPath = req.getContextPath();
         url = url.replace(contextPath, "").replaceAll("/+", "/");
-        if (!this.handlerMapping.containsKey(url)) {
+        if (!this.handlerMethodMapping.containsKey(url)) {
             resp.getWriter().write("404 NOT FOUND!");
             return;
         }
-        Method method = this.handlerMapping.get(url);
+        Method method = this.handlerMethodMapping.get(url);
         // 获取方法的参数列表
         Class<?>[] parameterTypes = method.getParameterTypes();
         // 获取请求的参数
@@ -101,7 +119,7 @@ public class ManualDispatchServlet extends HttpServlet {
             if ("String".equals(requestParam)) {
                 for (Entry<String, String[]> param : parameterMap.entrySet()) {
                     String[] paramValue = param.getValue();
-                    String value = Arrays.toString(paramValue).replaceAll("\\[|]", "").replaceAll(",\\s", ",");
+                    String value = Arrays.toString(paramValue).replaceAll(REG, "").replaceAll(",\\s", ",");
                     paramValues[i++] = value;
                 }
             }
@@ -110,12 +128,17 @@ public class ManualDispatchServlet extends HttpServlet {
         try {
             // 第一个参数是method所对应的实例
             // 在ioc容器中
-            method.invoke(this.controllerMap.get(url), paramValues);
+            method.invoke(this.urlControllerMap.get(url), paramValues);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * 加载配置文件，把配置文件的 key -value 加载到 properties
+     *
+     * @param location 配置文件的路径
+     */
     private void doLoadConfig(String location) {
         // 把web.xml中的contextConfigLocation对应value值的文件加载到流里面
         InputStream resourceAsStream = this.getClass().getClassLoader().getResourceAsStream(location);
@@ -137,6 +160,11 @@ public class ManualDispatchServlet extends HttpServlet {
 
     }
 
+    /**
+     * 扫描配置的包路径，并且把所有的类的全路径名称都放到 <link @allClassNameInScanPackage> 列表中
+     *
+     * @param packageName 包路径
+     */
     private void doScanner(String packageName) {
         // 把所有的.替换成/
         URL url = this.getClass().getClassLoader().getResource("/" + packageName.replaceAll("\\.", "/"));
@@ -151,26 +179,29 @@ public class ManualDispatchServlet extends HttpServlet {
                 doScanner(packageName + "." + file.getName());
             } else {
                 String className = packageName + "." + file.getName().replace(".class", "");
-                classNames.add(className);
+                allClassNameInScanPackage.add(className);
             }
         }
     }
 
+    /**
+     * 实例化列表 allClassNameInScanPackage 中的bean，只实例化 带有标注 LPController 以及 LPService 的类，并把他们放到容器 iocContainer 中
+     */
     private void doInstance() {
-        if (classNames.isEmpty()) {
+        if (allClassNameInScanPackage.isEmpty()) {
             return;
         }
-        for (String className : classNames) {
+        for (String className : allClassNameInScanPackage) {
             try {
                 // 把类搞出来,反射来实例化(只有加@MyController需要实例化)
                 Class<?> clazz = Class.forName(className);
                 if (clazz.isAnnotationPresent(LPController.class)) {
-                    ioc.put(toLowerFirstWord(clazz.getSimpleName()), clazz.newInstance());
+                    iocContainer.put(toLowerFirstWord(clazz.getSimpleName()), clazz.newInstance());
                 } else if (clazz.isAnnotationPresent(LPService.class)) {
                     Object instance = clazz.newInstance();
                     LPService service = clazz.getAnnotation(LPService.class);
                     String key = service.value();
-                    ioc.put(key, instance);
+                    iocContainer.put(key, instance);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -179,16 +210,16 @@ public class ManualDispatchServlet extends HttpServlet {
     }
 
     private void initHandlerMapping() {
-        if (ioc.isEmpty()) {
+        if (iocContainer.isEmpty()) {
             return;
         }
         try {
-            for (Entry<String, Object> entry : ioc.entrySet()) {
+            for (Entry<String, Object> entry : iocContainer.entrySet()) {
                 Class<?> clazz = entry.getValue().getClass();
                 if (!clazz.isAnnotationPresent(LPController.class)) {
                     continue;
                 }
-                Object instance = entry.getValue();
+                Object controllerInstance = entry.getValue();
                 // 拼url时,是controller头的url拼上方法上的url
                 String baseUrl = "";
                 if (clazz.isAnnotationPresent(LPRequestMapping.class)) {
@@ -204,8 +235,8 @@ public class ManualDispatchServlet extends HttpServlet {
                     String url = annotation.value();
 
                     url = (baseUrl + "/" + url).replaceAll("/+", "/");
-                    handlerMapping.put(url, method);
-                    controllerMap.put(url, instance);
+                    urlControllerMap.put(url, controllerInstance);
+                    handlerMethodMapping.put(url, method);
                     System.out.println(url + "," + method);
                 }
             }
@@ -219,11 +250,11 @@ public class ManualDispatchServlet extends HttpServlet {
      * 给被AutoWired注解的属性注入值
      */
     private void doAutoWired() {
-        if (ioc.isEmpty()) {
+        if (iocContainer.isEmpty()) {
             return;
         }
         // 遍历所有被托管的对象
-        for (Map.Entry<String, Object> entry : ioc.entrySet()) {
+        for (Map.Entry<String, Object> entry : iocContainer.entrySet()) {
             // 查找所有被Autowired注解的属性
             // getFields()获得某个类的所有的公共（public）的字段，包括父类;
             // getDeclaredFields()获得某个类的所有申明的字段，即包括public、private和proteced，但是不包括父类的申明字段。
@@ -247,9 +278,9 @@ public class ManualDispatchServlet extends HttpServlet {
                 // 将私有化的属性设为true,不然访问不到
                 field.setAccessible(true);
                 // 去映射中找是否存在该beanName对应的实例对象
-                if (ioc.get(beanName) != null) {
+                if (iocContainer.get(beanName) != null) {
                     try {
-                        field.set(instance, ioc.get(beanName));
+                        field.set(instance, iocContainer.get(beanName));
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
