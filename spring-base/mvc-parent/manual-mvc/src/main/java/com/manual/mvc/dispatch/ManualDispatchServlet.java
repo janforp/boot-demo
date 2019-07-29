@@ -168,7 +168,8 @@ public class ManualDispatchServlet extends HttpServlet {
      */
     private void doScanner(String packageName) {
         // 把所有的.替换成/
-        URL url = this.getClass().getClassLoader().getResource("/" + packageName.replaceAll("\\.", "/"));
+        String fileUrl = "/" + packageName.replaceAll("\\.", "/");
+        URL url = this.getClass().getClassLoader().getResource(fileUrl);
         assertNotNull(url, "url");
         File dir = new File(url.getFile());
         assertNotNull(dir, "dir");
@@ -197,7 +198,9 @@ public class ManualDispatchServlet extends HttpServlet {
                 // 把类搞出来,反射来实例化(只有加@MyController需要实例化)
                 Class<?> clazz = Class.forName(className);
                 if (clazz.isAnnotationPresent(LPController.class)) {
-                    beanNameToInstanceIocContainer.put(toLowerFirstWord(clazz.getSimpleName()), clazz.newInstance());
+                    String iocKey = toLowerFirstWord(clazz.getSimpleName());
+                    Object instance = clazz.newInstance();
+                    beanNameToInstanceIocContainer.put(iocKey, instance);
                 } else if (clazz.isAnnotationPresent(LPService.class)) {
                     Object instance = clazz.newInstance();
                     LPService service = clazz.getAnnotation(LPService.class);
@@ -222,10 +225,10 @@ public class ManualDispatchServlet extends HttpServlet {
                 }
                 Object controllerInstance = entry.getValue();
                 // 拼url时,是controller头的url拼上方法上的url
-                String baseUrl = "";
+                String baseUrlInClass = "";
                 if (clazz.isAnnotationPresent(LPRequestMapping.class)) {
                     LPRequestMapping annotation = clazz.getAnnotation(LPRequestMapping.class);
-                    baseUrl = annotation.value();
+                    baseUrlInClass = annotation.value();
                 }
                 Method[] methods = clazz.getMethods();
                 for (Method method : methods) {
@@ -233,12 +236,11 @@ public class ManualDispatchServlet extends HttpServlet {
                         continue;
                     }
                     LPRequestMapping annotation = method.getAnnotation(LPRequestMapping.class);
-                    String url = annotation.value();
-
-                    url = (baseUrl + "/" + url).replaceAll("/+", "/");
-                    urlControllerMap.put(url, controllerInstance);
-                    handlerMethodMapping.put(url, method);
-                    System.out.println(url + "," + method);
+                    String methodUrl = annotation.value();
+                    String totalUrl = (baseUrlInClass + "/" + methodUrl).replaceAll("/+", "/");
+                    urlControllerMap.put(totalUrl, controllerInstance);
+                    handlerMethodMapping.put(totalUrl, method);
+                    System.out.println(totalUrl + "," + method);
                 }
             }
 
@@ -269,12 +271,14 @@ public class ManualDispatchServlet extends HttpServlet {
                 String beanName;
                 // 获取AutoWired上面写的值，譬如@Autowired("abc")
                 LPAutowired autowired = field.getAnnotation(LPAutowired.class);
-                if ("".equals(autowired.value())) {
+                String autowiredValue = autowired.value();
+                if ("".equals(autowiredValue)) {
                     // 例 searchService。注意，此处是获取属性的类名的首字母小写，与属性名无关，可以定义@Autowired
                     // SearchService abc都可以。
-                    beanName = toLowerFirstWord(field.getType().getSimpleName());
+                    String simpleName = field.getType().getSimpleName();
+                    beanName = toLowerFirstWord(simpleName);
                 } else {
-                    beanName = autowired.value();
+                    beanName = autowiredValue;
                 }
                 // 将私有化的属性设为true,不然访问不到
                 field.setAccessible(true);
