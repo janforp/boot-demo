@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>base-cglib-use</module>
+        <module>directly-use-cglib</module>
     </modules>
 
 
