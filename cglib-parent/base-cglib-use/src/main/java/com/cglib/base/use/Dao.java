@@ -8,6 +8,8 @@ package com.cglib.base.use;
  */
 public class Dao {
 
+    public Dao(){}
+
     public void update() {
         System.out.println("PeopleDao.update()");
     }
