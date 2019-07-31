@@ -17,5 +17,4 @@ public class WrongUserKey {
 
     private String userId;
 
-    Float
 }

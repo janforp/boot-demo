@@ -21,7 +21,7 @@ public class MapKeyTest {
         key1.setUserId("1");
         key1.setUsername("姓名1");
 
-        Map<WrongUserKey, String> map = new HashMap<>();
+        Map<WrongUserKey, String> map = new HashMap<WrongUserKey, String>();
         map.put(key, key.getUsername());
         map.put(key1, key1.getUsername());
 
