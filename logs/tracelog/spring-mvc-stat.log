@@ -1,0 +1,5 @@
+{"time":"2019-07-30 20:11:44.704","stat.key":{"method":"GET","local.app":"SOFATracerSpringMVC","request.url":"http://localhost:8080/springmvc"},"count":1,"total.cost.milliseconds":106,"success":"true","load.test":"F"}
+{"time":"2019-07-30 20:11:44.704","stat.key":{"method":"GET","local.app":"SOFATracerSpringMVC","request.url":"http://localhost:8080/"},"count":1,"total.cost.milliseconds":20,"success":"false","load.test":"F"}
+{"time":"2019-07-30 20:17:00.015","stat.key":{"method":"GET","local.app":"SOFATracerSLF4JDemo","request.url":"http://localhost:8080/"},"count":1,"total.cost.milliseconds":26,"success":"false","load.test":"F"}
+{"time":"2019-07-30 20:17:00.017","stat.key":{"method":"GET","local.app":"SOFATracerSLF4JDemo","request.url":"http://localhost:8080/slf4j"},"count":5,"total.cost.milliseconds":94,"success":"true","load.test":"F"}
+{"time":"2019-07-30 20:19:56.103","stat.key":{"method":"GET","local.app":"SOFATracerSLF4JDemo","request.url":"http://localhost:8080/slf4j"},"count":1,"total.cost.milliseconds":75648,"success":"true","load.test":"F"}

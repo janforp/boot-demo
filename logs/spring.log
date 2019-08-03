@@ -1,0 +1,136 @@
+2019-07-30 20:09:08.474  INFO 81763 --- [main] com.alipay.sofa.common.log               : Sofa-Middleware-Log SLF4J : Actual logging.path is [ ./logs ]
+2019-07-30 20:09:08.482  INFO 81763 --- [main] com.alipay.sofa.common.log               : Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.sofa.infra Logback ]
+2019-07-30 20:09:08.718  INFO 81763 --- [main] c.a.s.t.e.springmvc.DemoApplication      : Starting DemoApplication on zhuchenjiandeMacBook-Pro.local with PID 81763 (/Users/janita/IdeaProjects/boot-demo/log-parent/sofa-tracer-master/tracer-samples/tracer-sample-with-springmvc/target/classes started by janita in /Users/janita/IdeaProjects/boot-demo)
+2019-07-30 20:09:08.719  INFO 81763 --- [main] c.a.s.t.e.springmvc.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-30 20:09:08.882  INFO 81763 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6107227e: startup date [Tue Jul 30 20:09:08 CST 2019]; root of context hierarchy
+2019-07-30 20:09:10.467  INFO 81763 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-07-30 20:09:10.538  INFO 81763 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-30 20:09:10.541  INFO 81763 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-07-30 20:09:10.690  INFO 81763 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-30 20:09:10.691  INFO 81763 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1810 ms
+2019-07-30 20:09:11.115  INFO 81763 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-30 20:09:11.122  INFO 81763 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcSofaTracerFilter' to urls: [/*]
+2019-07-30 20:09:11.124  INFO 81763 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-30 20:09:11.124  INFO 81763 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-30 20:09:11.125  INFO 81763 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-30 20:09:11.125  INFO 81763 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-30 20:09:11.658  INFO 81763 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6107227e: startup date [Tue Jul 30 20:09:08 CST 2019]; root of context hierarchy
+2019-07-30 20:09:11.718  INFO 81763 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/springmvc]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alipay.sofa.tracer.examples.springmvc.controller.SampleRestController.springmvc(java.lang.String)
+2019-07-30 20:09:11.721  INFO 81763 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-30 20:09:11.722  INFO 81763 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-30 20:09:11.750  INFO 81763 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:09:11.750  INFO 81763 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:09:11.785  INFO 81763 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:09:12.334  INFO 81763 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-30 20:09:12.372 ERROR 81763 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:265) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:208) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.19.RELEASE.jar:4.3.19.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.16.RELEASE.jar:1.5.16.RELEASE]
+	at com.alipay.sofa.tracer.examples.springmvc.DemoApplication.main(DemoApplication.java:26) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_181]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_181]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_181]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_181]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_181]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1151) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018) ~[tomcat-embed-core-8.5.34.jar:8.5.34]
+	... 14 common frames omitted
+
+2019-07-30 20:09:12.377  INFO 81763 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-30 20:09:12.386  INFO 81763 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-07-30 20:09:12.390 ERROR 81763 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-07-30 20:09:12.391  INFO 81763 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6107227e: startup date [Tue Jul 30 20:09:08 CST 2019]; root of context hierarchy
+2019-07-30 20:09:12.392  INFO 81763 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-07-30 20:10:42.001  INFO 81813 --- [main] com.alipay.sofa.common.log               : Sofa-Middleware-Log SLF4J : Actual logging.path is [ ./logs ]
+2019-07-30 20:10:42.033  INFO 81813 --- [main] com.alipay.sofa.common.log               : Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.sofa.infra Logback ]
+2019-07-30 20:10:42.185  INFO 81813 --- [main] c.a.s.t.e.springmvc.DemoApplication      : Starting DemoApplication on zhuchenjiandeMacBook-Pro.local with PID 81813 (/Users/janita/IdeaProjects/boot-demo/log-parent/sofa-tracer-master/tracer-samples/tracer-sample-with-springmvc/target/classes started by janita in /Users/janita/IdeaProjects/boot-demo)
+2019-07-30 20:10:42.186  INFO 81813 --- [main] c.a.s.t.e.springmvc.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-30 20:10:42.251  INFO 81813 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6107227e: startup date [Tue Jul 30 20:10:42 CST 2019]; root of context hierarchy
+2019-07-30 20:10:43.590  INFO 81813 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-07-30 20:10:43.615  INFO 81813 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-30 20:10:43.615  INFO 81813 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-07-30 20:10:43.699  INFO 81813 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-30 20:10:43.699  INFO 81813 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1448 ms
+2019-07-30 20:10:43.883  INFO 81813 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-30 20:10:43.883  INFO 81813 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcSofaTracerFilter' to urls: [/*]
+2019-07-30 20:10:43.883  INFO 81813 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-30 20:10:43.883  INFO 81813 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-30 20:10:43.883  INFO 81813 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-30 20:10:43.884  INFO 81813 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-30 20:10:44.108  INFO 81813 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6107227e: startup date [Tue Jul 30 20:10:42 CST 2019]; root of context hierarchy
+2019-07-30 20:10:44.152  INFO 81813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/springmvc]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alipay.sofa.tracer.examples.springmvc.controller.SampleRestController.springmvc(java.lang.String)
+2019-07-30 20:10:44.155  INFO 81813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-30 20:10:44.156  INFO 81813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-30 20:10:44.179  INFO 81813 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:10:44.180  INFO 81813 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:10:44.208  INFO 81813 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:10:44.799  INFO 81813 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-30 20:10:44.850  INFO 81813 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-07-30 20:10:44.855  INFO 81813 --- [main] c.a.s.t.e.springmvc.DemoApplication      : Started DemoApplication in 3.251 seconds (JVM running for 4.195)
+2019-07-30 20:10:54.730  INFO 81813 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-30 20:10:54.730  INFO 81813 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-30 20:10:54.746  INFO 81813 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-07-30 20:15:45.678  INFO 81813 --- [Thread-11] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6107227e: startup date [Tue Jul 30 20:10:42 CST 2019]; root of context hierarchy
+2019-07-30 20:15:45.682  INFO 81813 --- [Thread-11] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-07-30 20:26:17.276  INFO 82194 --- [main] com.alipay.sofa.common.log               : Sofa-Middleware-Log SLF4J : Actual logging.path is [ ./logs ]
+2019-07-30 20:26:17.287  INFO 82194 --- [main] com.alipay.sofa.common.log               : Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.sofa.infra Logback ]
+2019-07-30 20:26:17.595  INFO 82194 --- [main] c.a.s.t.e.springmvc.DemoApplication      : Starting DemoApplication on zhuchenjiandeMacBook-Pro.local with PID 82194 (/Users/janita/IdeaProjects/boot-demo/log-parent/sofa-tracer-master/tracer-samples/tracer-sample-with-springmvc/target/classes started by janita in /Users/janita/IdeaProjects/boot-demo)
+2019-07-30 20:26:17.597  INFO 82194 --- [main] c.a.s.t.e.springmvc.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-30 20:26:17.661  INFO 82194 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@266374ef: startup date [Tue Jul 30 20:26:17 CST 2019]; root of context hierarchy
+2019-07-30 20:26:19.736  INFO 82194 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-07-30 20:26:19.764  INFO 82194 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-30 20:26:19.764  INFO 82194 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-07-30 20:26:20.028  INFO 82194 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-30 20:26:20.029  INFO 82194 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2367 ms
+2019-07-30 20:26:20.426  INFO 82194 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-30 20:26:20.427  INFO 82194 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'SpringMvcSofaTracerFilter' to urls: [/*]
+2019-07-30 20:26:20.427  INFO 82194 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-30 20:26:20.428  INFO 82194 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-30 20:26:20.428  INFO 82194 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-30 20:26:20.428  INFO 82194 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-30 20:26:20.886  INFO 82194 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@266374ef: startup date [Tue Jul 30 20:26:17 CST 2019]; root of context hierarchy
+2019-07-30 20:26:21.005  INFO 82194 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/springmvc]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alipay.sofa.tracer.examples.springmvc.controller.SampleRestController.springmvc(java.lang.String)
+2019-07-30 20:26:21.018  INFO 82194 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-30 20:26:21.023  INFO 82194 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-30 20:26:22.208  INFO 82194 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:26:22.208  INFO 82194 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:26:22.275  INFO 82194 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-30 20:26:23.376  INFO 82194 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-30 20:26:23.460  INFO 82194 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-07-30 20:26:23.471  INFO 82194 --- [main] c.a.s.t.e.springmvc.DemoApplication      : Started DemoApplication in 6.739 seconds (JVM running for 7.846)
+2019-07-30 20:27:45.930  INFO 82194 --- [Thread-17] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@266374ef: startup date [Tue Jul 30 20:26:17 CST 2019]; root of context hierarchy
+2019-07-30 20:27:45.932  INFO 82194 --- [Thread-17] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
