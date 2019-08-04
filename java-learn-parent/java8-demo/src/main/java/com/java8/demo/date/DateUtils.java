@@ -35,6 +35,20 @@ public class DateUtils {
     }
 
     public static void main(String[] args) {
-        testFormat();
+        // testFormat();
+        test2();
+    }
+
+    public static void test2() {
+
+        // 解析日期
+        String dateText = "20180924";
+        LocalDate date = LocalDate.parse(dateText, DateTimeFormatter.ofPattern("yyyyMMdd"));
+        System.out.println("格式化之后的日期=" + date);
+
+        // 格式化日期
+        dateText = date.format(DateTimeFormatter.ISO_DATE);
+        System.out.println("dateText=" + dateText);
+
     }
 }
