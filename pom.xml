@@ -40,6 +40,7 @@
 		<module>java-learn-parent</module>
 		<module>aop-parent</module>
         <module>cglib-parent</module>
+        <module>security-parent</module>
     </modules>
 	<packaging>pom</packaging>
 
